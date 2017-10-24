@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+// Antony Jose J
+//
+// The these files use recommendations from and Scalable and Modular Architecture for CSS (SMACSS) http://smacss.com/book
+// with optional support for Bourbon, Susy, Compass
+
+// Contents:
+// 01. Utilities ( COMPASS, Variables, Functions, Mixins, etc... )
+// 02. Libraries
+// 03. Base ( regular elements )
+// 04. Layout ( layout template, grid structure )
+// 05. Modules ( modules, background, colors, typography.. )
+// 06. States
+// 07. @font-face
+// 08. Print
+// 09. Shame
+
+// ==========================================================================
+// $Utilities - Variables, mixins, grid-system, etc.
+// ==========================================================================
+	@import 'src/client/styles/utilities/_bootstrap-sprockets';
+	@import 'src/client/styles/utilities/_bootstrap';
+	@import 'src/client/styles/utilities/_toastr';
+	@import "bower_components/angular-material/angular-material.scss" ;
+	@import 'src/client/styles/utilities/_angular-material-icons';
+	@import "bower_components/owl.carousel/src/scss/owl.carousel" ;
+	@import "bower_components/owl.carousel/src/scss/owl.theme.default" ;
+
+// ==========================================================================
+// $Lib
+// import global varibales, 3rd party dependancies
+// ==========================================================================
+@import 'src/client/styles/utilities/global'; /* global variables*/
+@import 'src/client/styles/utilities/_global-style'; 
+@import "src/client/styles/utilities/_animate";
+@import 'src/client/styles/utilities/transitions';
+
+// ==========================================================================
+// @source http://smacss.com/book/type-base
+//
+// Base Rules
+//
+// A Base rule is applied to an element using an element selector, a
+// descendent selector, or a child selector, along with any pseudo-classes.
+// It doesn’t include any class or ID selectors. It is defining the default
+// styling for how that element should look in all occurrences on the page.
+// ==========================================================================
+@import 'src/client/styles/base/normalize';
+@import 'src/client/styles/base/base';
+@import 'src/client/styles/base/baseStyles'; // base styles with classes and ids. Used accross the app
+
+// ==========================================================================
+// @source http://smacss.com/book/type-layout
+//
+// Layout Rules
+//
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Major layout styles such as header and footer are traditionally
+// styled using ID selectors but take the time to think about the elements
+// that are common across all components of the page and use class selectors
+// where appropriate.
+// ==========================================================================
+/*@import 'src/client/styles/layout/layoutElements';*/
+@import 'src/client/styles/_forms';
+@import 'src/client/styles/layout/_buttons';
+
+
+// ==========================================================================
+// @source http://smacss.com/book/type-module
+//
+// Module Rules
+//
+// As briefly mentioned in the previous section, a Module is a more discrete
+// component of the page. It is your navigation bars and your carousels and
+// your dialogs and your widgets and so on. This is the meat of the page.
+// Modules sit inside Layout components. Modules can sometimes sit within
+// other Modules, too. Each Module should be designed to exist as a standalone
+// component. In doing so, the page will be more flexible. If done right,
+// Modules can easily be moved to different parts of the layout without
+// breaking.
+//
+// When defining the rule set for a module, avoid using IDs and element
+// selectors, sticking only to class names. A module will likely contain a
+// number of elements and there is likely to be a desire to use descendent
+// or child selectors to target those elements.
+// ==========================================================================
+@import 'src/client/styles/modules/_links';
+/*@import 'src/client/styles/modules/buttons';
+@import 'src/client/styles/modules/img';
+@import 'src/client/styles/modules/sprites';
+@import 'src/client/styles/modules/svg';
+@import 'src/client/styles/modules/lightBox';
+@import 'src/client/styles/modules/infoBubble';*/
+
+// ==========================================================================
+// Auto imports
+// All scss partials under /src/client/app/ will be injected here
+// This means you don't have to explicitly include the scss partial sitting
+// next to the templat and controller diffinition - they're all pulled in 
+// automatically
+// ==========================================================================
+ /* inject:imports */
+ 
+  /* endinject */
+
+// ==========================================================================
+// @source http://smacss.com/book/type-theme
+//
+// Theme Rules
+//
+// Themes can affect any of the primary types. They can
+// override base styles like default link colours. They can change
+// module elements such as colours and borders. They can affect
+// layout with different arrangements. They can also alter how states look.
+// ==========================================================================
+@import 'src/client/styles/themes/_agro_material_design';
+
+// ==========================================================================
+// $@font-face
+// ==========================================================================
+	@import 'src/client/styles/utilities/_font';
+	@import "bower_components/font-awesome/scss/font-awesome" ;
+// ==========================================================================
+// $Print - Print style sheet
+// ==========================================================================
+@import 'src/client/styles/print/_print';
+
+// ==========================================================================
+// Styles used for debug display
+// ==========================================================================
+/*@import 'src/client/styles/utilities/lib/debug';*/
+
+// ==========================================================================
+// Styles to overrivde existing styles at certain breakpoints.
+// Breakpoint specific layout/display should be written using our css grid 
+// syste, but where styling is needed beyond those override here.
+// This is included near the end by design as it should override previous
+// styles.
+// ==========================================================================
+	@import 'src/client/styles/layout/_breakpoint';
+// ==========================================================================
+// $Shame
+// @see http://csswizardry.com/2013/04/shame-css/
+// Thanks https://github.com/heroheman/shepherd/blob/master/sass/_shame.scss
+// ==========================================================================
+	@import 'src/client/styles/_shame';
+
+//========================================================================
+//				Reset and Override
+//========================================================================
+	@import "src/client/styles/_kuzhal";
+	@import "src/client/styles/_style-override";
+	@import "src/client/styles/_reset";
+
+
+
+
+
+
+
+
+
+
+

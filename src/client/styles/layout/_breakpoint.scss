@@ -1,0 +1,39 @@
+
+    /* upto Small Devices, Tablets (portrait) */ 
+    @media only screen and (max-width : 480px) {
+        md-dialog{max-width : 100% ;}
+        .md-dialog-container{}
+        .md-actions{position: absolute;
+            bottom: 0;
+            width: 95%;
+            padding: 5px;
+        }
+        img.profile{
+                width: 60%;
+                margin: 0 auto;
+        }
+        .jumbotron > .kuzhal_bg{
+            height: 613px;
+            background-size: cover;
+            width: 100%;
+            background-position: -220px 0;
+        }
+        
+    }
+
+    /* upto Tablets (portrait & landscape) */
+    @media only screen and (min-width : 481px) and (max-width : 767px) {
+        
+    }
+    
+    /* Upto Large devices */
+    @media only screen and (min-width : 768px) {
+        div#captioned-gallery{
+            
+        }
+    }
+
+    /* Upto Large devices */
+    @media only screen and (min-width : 768px) and (max-width : 1200px){
+    }
+    

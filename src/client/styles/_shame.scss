@@ -1,0 +1,82 @@
+// ==========================================================================
+// because hacks happen.
+//
+// be very specific about what each piece of code is doing, and
+// how to better fix it later
+// ==========================================================================
+
+// Try:  $ git blame _shame.scss
+
+// Rules:
+// ---------------
+//   1. If it’s a hack, it goes in _shame.scss.
+//   2. Document all hacks fully:
+//   3. What part of the codebase does it relate to?
+//   4. Why was this needed?
+//   5. How does this fix it?
+//   6. How might you fix it properly, given more time?
+//   7. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+//   8. Try and clean _shame.scss up when you have some down time.
+//       Even better, get tech-debt story in which you can dedicate actual sprint time to it.
+
+/* Firefox tweaks */
+@-moz-document url-prefix() {
+    md-radio-button.md-checked .md-on {
+        -moz-transform: scale(1.1);
+        left: 1px;
+        top: 1px;
+    }
+    
+    /* get rid of the ugly dotted box on focused select boxes in FF and bemp the select text over to the left a bit */
+    select {
+        -moz-appearance: none;
+        color: rgba(0, 0, 0, 0) !important;
+        text-shadow: 0 0 0 $placeholder-blue;
+        margin-left: -6px;
+    }
+    div.inputWidget.valueEntered select {
+        text-shadow: 0 0 0 #000;
+    }
+
+    /* for some reason FF doesn't honor the fill on some svgs. to get around this we use opacity to dim an inactive badge */
+    .past .badgeIcon svg.icon {
+        stroke: #fff !important;
+        fill: #fff !important;
+        opacity: 0.2;
+    }
+}
+
+/* iOS tweaks */
+/* bump selects left a bit */
+html.ios .selectWrapper select {
+    margin-left: -7px;
+}
+html.ios .inputWidget.valueEntered .selectWrapper select {
+    margin-left: -1px;
+}
+
+
+/* IE10+ CSS styles TWEAKS */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {   
+    md-dialog {
+        margin: 0px ;
+    }
+    @media (min-width: 768px) {
+        .ieMaxHeight {
+            position: absolute;
+        }
+        .bottomSpace{
+            padding-bottom: 38px;
+        }
+    }
+}
+
+/* this is to try to make the dialog overlays work in iOS - stop parent scrolling, but also
+   position correctly when the URL part shrinks/grows */ 
+.ios.iphone div.md-dialog-container,
+.ios.iphone md-backdrop.md-dialog-backdrop,
+.ios.ipad div.md-dialog-container,
+.ios.ipad md-backdrop.md-dialog-backdrop {
+    position: fixed;
+    top: 0 !important;
+}

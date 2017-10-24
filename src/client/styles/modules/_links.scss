@@ -1,0 +1,53 @@
+a[href^=tel] {
+    color: $infotext-blue !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+a[href^=tel]:hover {
+    text-decoration: none;
+}
+a[href $='.pdf'] {
+    display: inline-block;
+    padding: 10px 0;
+    padding-left: 32px;
+    position: relative;
+}
+a[href $='.pdf']:before {
+    content: "";
+    background-size: ($sprite-sheet-width/2) ($sprite-sheet-height/2);
+    background-image: url(../images/icon_sprite_sheet.png);
+    display: inline-block;
+    background-position: -52px -14px;
+    width: 26px;
+    height: 30px;
+    vertical-align: bottom;
+    margin-right: 6px;
+    margin-top: -15px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.pdf_icon a {
+    display: inline-block;
+    padding: 10px 0;
+    padding-left: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.pdf_icon a:before {
+    content: "";
+    background-size: ($sprite-sheet-width/2) ($sprite-sheet-height/2);
+    background-image: url(../images/icon_sprite_sheet.png);
+    display: inline-block;
+    background-position: -52px -14px;
+    width: 26px;
+    height: 30px;
+    vertical-align: bottom;
+    margin-right: 6px;
+    margin-top: -15px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}

@@ -1,0 +1,114 @@
+ul li.no-bullet {
+    margin-left: -15px;
+}
+p.no-spacing {
+    padding: 0;
+    margin: 0;
+}
+p.tight-line-height {
+    line-height: 18px;
+}
+.hidden-element {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+.noWrap {
+    white-space: nowrap;
+}
+
+p.compactLineHeight {
+    line-height: 20px;
+}
+
+ul.checklist {
+    list-style: none;
+    padding: 10px 0 20px 0;
+    margin: 0 25px;
+    color: $dark-grey;
+    font-size: 14px;
+    line-height: 18px;
+}
+ul.checklist li {
+    padding: 4px 0;
+}
+ul.checklist li .icon_check {
+    margin-right: 6px;
+}
+
+a.small-link {
+    text-decoration: underline;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.underline-text {
+    border-bottom: solid 1px #666;
+    display: inline;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.text-underline {
+    text-decoration: underline;
+    color: $middle-grey;
+    cursor: pointer;
+}
+
+/* 
+  * Styles from the official style guide - we should use these where possible
+  * http://sharepointenclave/sites/tosba/APP/Shared%20Documents/PRJ12018%20Touch%20Apply%20-%20Working%20Documents/UX%20(Content,%20VisD,%20IA%20stuff)/Visual%20Design/Typography.pdf
+*/
+.headline3 {
+    color: #333;
+    font-size: 16px;
+    line-height: 19px;
+}
+.headline4 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+}
+.headline5 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000; }
+.headLine2 {
+    color: #0950a0;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.headLine1 {
+    color: #0950a0;
+    font-size: 19px;
+    line-height: 24px;
+}
+
+.floatingLabelCompleted {
+    font-weight: bold;
+    color: $middle-grey;
+    font-size: 11px;
+}
+
+.textLink {
+    font-size: 13px;
+    line-height :18px;
+    color: #666;
+    text-decoration: underline;
+}
+.bodyStyle{
+    color:#333333;
+    font-size:14px;
+    line-height:18px;
+}
+.iconLabel2{
+    color:#287db0;
+    font-size:11px;
+    line-height:14px;
+}

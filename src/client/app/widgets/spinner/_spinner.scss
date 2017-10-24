@@ -1,0 +1,16 @@
+.spinner-container{
+	
+	border: none;
+
+	md-dialog{
+		box-shadow : none;
+	}
+	md-dialog-content{
+		overflow: hidden;
+	}
+	img {width: 150px;
+    left: 30%;
+    position: absolute;
+    top: 45%;}
+}
+.md-dialog-container{height:auto !important;}

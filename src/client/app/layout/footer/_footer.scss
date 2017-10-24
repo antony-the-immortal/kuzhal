@@ -1,0 +1,133 @@
+
+/**/
+
+.footer_{display: flex;justify-content: space-around;}
+footer:before,
+footer:after {
+    display: table;
+    content: " "
+}
+
+footer:after {
+    clear: both
+}
+footer {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    min-height: 30px;
+    background: $darker-grey;
+	color: #aaaaaa;
+	margin-top:15px;
+
+
+ .col.reset {
+    margin: 0
+}
+
+ h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500
+}
+
+ .col p {
+    font-size: 13px;
+    margin-bottom: 10px
+}
+
+ a {
+    text-decoration: none
+}
+
+ a:hover {
+    text-decoration: none
+}
+
+ .col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+
+ .col ul li span {
+    color: #fff
+}
+.accredition ul  {
+    li {
+        display: inline-flex;
+    }
+    div {
+        padding-left: 15px;
+        span {
+            display: block;
+            line-height: 20px !important;
+        }
+    }
+}
+
+ .col address {
+    color: #ddd;
+    padding: 8px 0
+}
+
+ .company-info {
+    font-size: 10px;
+    text-align: justify
+}
+
+ .company-info h2 {
+    font-size: 14px;
+    font-weight: 600
+}
+
+ .col.col-social-icons i {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 2px;
+     font-family: "FontAwesome";
+}
+
+ form {
+    margin-top: 20px
+}
+
+ hr {
+    border-top: 1px solid $button-black
+
+}
+
+ .copyright {
+    color: #fff;
+    font-size :12px;
+}
+.col-social-icons .facebook:hover {
+    background: #43609c;
+    color: #fff
+}
+
+.col-social-icons .twitter:hover {
+    background: #62addb;
+    color: #fff
+}
+
+.col-social-icons .google:hover {
+    background: #dd4b39;
+    color: #fff
+}
+
+.col-social-icons .youtube:hover {
+    background: #cc181e;
+    color: #fff
+}
+}

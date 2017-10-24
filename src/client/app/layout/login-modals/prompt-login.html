@@ -1,0 +1,22 @@
+<md-dialog aria-label="Login" ng-cloak>
+    <form name="form" data-ng-submit="vm.handleSubmit()">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>You are not Logged-In yet!</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <p>Seems like you haven't logged in yet.Would you like to login now.</p>
+            </div>
+         <div class="md-actions">
+            <md-button type="submit" class="md-primary md-raised" aria-label="Yes. Login Now" ng-click="login()">
+                Yes. Login Now
+            </md-button>
+            <md-button type="button" class="md-primary md-raised" ng-click="close()" aria-label="No, Will do it later">
+                No, Will do it later
+            </md-button>
+        </div> 
+        </md-dialog-content>
+    </form>
+</md-dialog>

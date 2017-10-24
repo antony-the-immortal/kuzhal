@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <style>
+    /* This helps the ng-show/ng-hide animations start at the right place. */
+    /* Since Angular has this but needs to load, this gives us the class early. */
+    
+    .ng-hide {
+      display: none!important;
+    }
+  </style>
+  <title ng-bind="title">
+    Kuzhal
+  </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <base href="/">
+
+  <!-- build:css styles/lib.css -->
+ 
+  <!-- endbuild -->
+
+  <!-- build:css styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/src/client/styles/styles.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  <!-- Essential styles-->
+</head>
+
+<body>
+  <div>
+    <div ng-include="'app/layout/shell/shell.html'"></div>
+  </div>
+  <!-- build:js js/lib.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/toastr/toastr.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+  <script src="/bower_components/angular-messages/angular-messages.js"></script>
+  <script src="/bower_components/angular-ui-utils/ui-utils.js"></script>
+  <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="/bower_components/json3/lib/json3.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <script src="/bower_components/humanize-duration/humanize-duration.js"></script>
+  <script src="/bower_components/angular-timer/dist/angular-timer.js"></script>
+  <script src="/bower_components/angular-lz-string/angular-lz-string.js"></script>
+  <script src="/bower_components/angular-ui-map/ui-map.js"></script>
+  <script src="/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+  <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js js/app.js -->
+  <!-- inject:js -->
+  <script src="/src/client/app/app.module.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.module.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.module.js"></script>
+  <script src="/src/client/app/blocks/router/router.module.js"></script>
+  <script src="/src/client/app/core/core.module.js"></script>
+  <script src="/src/client/app/kuzhal/home/home.module.js"></script>
+  <script src="/src/client/app/kuzhal/kuzhal.module.js"></script>
+  <script src="/src/client/app/layout/layout.module.js"></script>
+  <script src="/src/client/app/widgets/widgets.module.js"></script>
+  <script src="/src/client/app/blocks/cookies/cookie.js"></script>
+  <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.js"></script>
+  <script src="/src/client/app/blocks/interceptors/http-interceptor.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.js"></script>
+  <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
+  <script src="/src/client/app/blocks/session/session.js"></script>
+  <script src="/src/client/scripts/common.js"></script>
+  <script src="/src/client/app/core/config/app.config.js"></script>
+  <script src="/src/client/app/core/constants/app.constants.js"></script>
+  <script src="/src/client/app/core/constants/constants.js"></script>
+  <script src="/src/client/app/core/constants/kuzhal.constants.js"></script>
+  <script src="/src/client/app/core/constants/landing-page.constants.js"></script>
+  <script src="/src/client/app/core/core.route.js"></script>
+  <script src="/src/client/app/core/directives/add-to-cart-animation.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-capitalize-firstletter.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-characters-allowed.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-input.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-max-amount.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-max-date.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-min-amount.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-owl-carousel-wrapper.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-text-input.directive.js"></script>
+  <script src="/src/client/app/core/directives/app-valid-date.directive.js"></script>
+  <script src="/src/client/app/core/directives/focus-error.directive.js"></script>
+  <script src="/src/client/app/core/directives/ht-img-person.directive.js"></script>
+  <script src="/src/client/app/core/directives/ht-widget-header.directive.js"></script>
+  <script src="/src/client/app/core/directives/min-date.directive.js"></script>
+  <script src="/src/client/app/core/directives/navigate.directive.js"></script>
+  <script src="/src/client/app/core/directives/verify-email-phone.directive.js"></script>
+  <script src="/src/client/app/core/filters/account-number-mask.filter.js"></script>
+  <script src="/src/client/app/core/filters/capitalize-first-letter.filter.js"></script>
+  <script src="/src/client/app/core/filters/country.filter.js"></script>
+  <script src="/src/client/app/core/inputs/input-configuration.js"></script>
+  <script src="/src/client/app/core/inputs/input-labels.js"></script>
+  <script src="/src/client/app/core/inputs/input-validation-messages.js"></script>
+  <script src="/src/client/app/core/service/data.service.js"></script>
+  <script src="/src/client/app/core/service/date-utils.service.js"></script>
+  <script src="/src/client/app/core/service/device-utils.service.js"></script>
+  <script src="/src/client/app/core/service/events.service.js"></script>
+  <script src="/src/client/app/core/service/lodash.js"></script>
+  <script src="/src/client/app/core/service/login.service.js"></script>
+  <script src="/src/client/app/core/service/scroll.service.js"></script>
+  <script src="/src/client/app/core/utils/map.controller.js"></script>
+  <script src="/src/client/app/core/utils/utils.js"></script>
+  <script src="/src/client/app/kuzhal/home/home.controller.js"></script>
+  <script src="/src/client/app/kuzhal/home/home.route.js"></script>
+  <script src="/src/client/app/layout/footer/footer.controller.js"></script>
+  <script src="/src/client/app/layout/header/header.controller.js"></script>
+  <script src="/src/client/app/layout/shell/shell.controller.js"></script>
+  <script src="/src/client/app/layout/sidebar/ht-sidebar.directive.js"></script>
+  <script src="/src/client/app/layout/sidebar/sidebar.controller.js"></script>
+  <script src="/src/client/scripts/lib/assets/responsive-mobile-nav/js/jquery.dlmenu.autofill.js"></script>
+  <script src="/src/client/scripts/lib/assets/responsive-mobile-nav/js/jquery.dlmenu.js"></script>
+  <script src="/src/client/scripts/lib/assets/social-buttons/js/rrssb.min.js"></script>
+  <script src="/src/client/scripts/lib/jquery-ui.min.js"></script>
+  <script src="/src/client/scripts/lib/modernizr.custom.js"></script>
+  <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
+  <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
+  <script src="/src/client/app/widgets/modal/modalService.js"></script>
+  <script src="/src/client/app/widgets/spinner/spinner.js"></script>
+  <!-- endinject -->
+
+  <!-- inject:templates:js -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</body>
+
+</html>

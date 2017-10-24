@@ -1,0 +1,53 @@
+<!-- FOOTER-->
+    <footer class="footer" ng-controller="FooterController as vm">
+        <div class="hidden-xs">
+                    <div class="col-md-12">
+                    <div class="col-md-4 pull-left">
+                        <h4>Contact us</h4>
+                        <ul class="pull-left">
+                            <li>
+                                <address>
+                                        {{ vm.kuzhalConstants.kuzhalData.address.addressLine1 }}<br>
+                                        {{ vm.kuzhalConstants.kuzhalData.address.addressLine2 }}<br>
+                                        {{ vm.kuzhalConstants.kuzhalData.address.city +' '+  vm.kuzhalConstants.kuzhalData.address.state +' - ' + vm.kuzhalConstants.kuzhalData.address.pinCode}}
+                                </address> 
+                            </li> 
+                            <li >Phone: <span ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers"><a href="tel:{{phone}}" title="Call Us">{{phone +', '}}</a></span></li>
+                            <li>Email: <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="Email Us">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
+                            <li></li>
+                        </ul >
+                    </div>
+                    <div class="col-md-5 pull-left accredition">
+                            <h4>Accredition</h4>
+                            <ul>
+                                <li ng-repeat="item in vm.kuzhalConstants.accredition">
+                                    <img alt="" ng-src="{{item.imagePath}}">
+                                    <div>
+                                        <span>{{ item.title }} </span>
+                                    <span>{{item.detail}}</span>
+                                </div>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="col col-social-icons pull-right">
+                        <h4>Follow us</h4> 
+                        <a href="#"><i class="fa fa-facebook facebook"></i></a> 
+                        <a href="#"><i class="fa fa-google-plus google"></i></a> 
+                        <a href="#"><i class="fa fa-youtube youtube"></i></a> 
+                        <a href="#"><i class="fa fa-twitter twitter"></i></a>
+                    </div>
+                        <!-- <a href="#"><img class="pull-right" src="images/logo1.png"></a> -->
+                </div>
+                <div class="col-md-12 copyright pull-right">2015 &copy; Kuzhal. All Rights Reserved.<a href="#">Terms and conditions</a></div>
+        </div>
+        <div class="container text-center visible-xs">
+        <div class="row">
+          <div class="col-xs-12">
+            <div>
+                2015 &copy; Kuzhal. All Rights Reserved.<br>
+                <a href="#">Terms and conditions</div>
+            <div class="footer_"><a href="#">Full Site</a> | <a href="/home/faq">Privacy</a> | <a href="/home/about">About Us</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>

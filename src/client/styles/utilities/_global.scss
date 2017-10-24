@@ -1,0 +1,178 @@
+// ==========================================================================
+// = Global Variables
+// ==========================================================================
+
+/**
+ * CSS layout debugging
+ * @link http://pesticide.io/
+ * @type boolean
+ */
+$pesticide-debug              : false;
+
+/**
+ * Define width for browsers w/out media query support
+ * @link http://jakearchibald.github.com/sass-ie/
+ * @type boolean
+ */
+
+$fix-mqs                      : false !default;
+
+/**
+ * Turn on/off IE specific styles
+ * @link http://jakearchibald.github.com/sass-ie/
+ * @type boolean
+ */
+
+$old-ie                       : false !default;
+
+// Color Scheme
+// examples based on the official Sass styleguide
+// =============
+
+// Descriptive colors:
+$error-red:                 #de162b;
+$go-green:                  #43a82f;
+$progress-green:            #52ce3a;
+$infotext-blue:             #287db0;
+$dark-blue:                 #0950a0;
+$badge-active:              #ffc425;
+$badge-inactive:            #ccc;
+$badge-complete:            #43a82f;
+$lightest-grey:             #F0F0F0;
+$light-grey:                #eee;
+$ui-element-grey:           #d2d2d2;
+$logo-grey:                 #bfbfbf;
+$middle-grey:               #666;
+$dark-grey:                 #333;
+$button-black:              #444;
+$secondary-button-block:    #545454;
+$placeholder-blue:          #287db0;
+$light-blue:                #d3ecf7;
+$middle-blue:               #0E65A7;
+$middle-blue2:              #8ACAE9;
+$middle-blue3:              #60a4cc;
+$menu-active-blue:          #84CBE8;
+$z-blue:					#3498db;
+$z-light-blue:				#4bc1f0;
+$z-dark-blue:				#00adef;
+$anchor-blue: 				#287DB0;
+$title-text-grey:			#666666;
+$darker-blue:				#0C2074;
+$progress-meter-green:		#43b038;
+$button-blue-dark:			#24659e;
+$button-blue-light:			#24659e;
+$pale-green:				#3AD5A0;
+$organic-green: 			#6f9a37;
+// Sprites
+// ==========
+$sprite-sheet-width:        260px;
+$sprite-sheet-height:       148px;
+
+$darker-grey : #262F36;
+
+/**
+ * Base font size in used in _mixins.scss
+ * @type number
+ */
+
+$base-font-size               : 16;
+
+/**
+ * Base line-height in used in _mixins.scss
+ * @type number
+ */
+
+$base-line-height             : 24;
+
+
+// Font Stacks
+// ===========
+
+/**
+ * (optional) URL for Google Fonts import
+ * @type string
+ */
+
+// $google-fonts-url          : 'https://fonts.googleapis.com/css?family=Roboto';
+
+/**
+ * (optional) names of webfonts imports
+ * @type array
+ */
+
+// $fonts                     : 'FONTNAME', 'FONTNAME', 'FONTNAME', 'FONTNAME';
+
+/**
+ * define font stack used for sans-serifs
+ * @type string
+ */
+
+$font-family-sans             : 'source-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/**
+ * define font stack used for serifs
+ * @type string
+ */
+
+$font-family-serif            : 'source-serif-pro', Georgia, 'Times New Roman', Times, serif;
+
+/**
+ * define font stack used for monospaced copy
+ * @type string
+ */
+
+$font-family-monospace        : 'source-code-pro','Inconsolata', "Menlo", Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+                                'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+                                Monaco, 'Courier New', Courier, monospace;
+
+/**
+ * define font stack used for headings
+ * @requires {variable} $font-family-serif
+ * @type string
+ */
+
+$font-family-display          : $font-family-serif;
+
+/**
+ * define font stack used for paragraphs
+ * @requires {variable} font-family-sans
+ * @type string
+ */
+
+$font-family-default          : $font-family-sans;
+
+// Font Weights
+// ============
+
+$font-weight-light            : 300;
+$font-weight-normal           : 400;
+$font-weight-semibold         : 700;
+$font-weight-bold             : 900;
+
+
+// Breakpoints
+// There are no common breakpoints; examples based on the official Sass styleguide
+// You'll need to define your own breakpoints to suit your design
+// ============
+
+$mobile-small                 : 240;
+$mobile-large                 : 320;
+$tablet-small                 : 480;
+$tablet-large                 : 768;
+$screen-small                 : 1024;
+$screen-large                 : 1280;
+
+/**
+ * Define z-indexes for various elements
+ * @link http://www.sitepoint.com/using-sass-maps/
+ * @type number
+ */
+
+// z-index reference
+$zindex: (
+      modal                   : 9000,
+      overlay                 : 8000,
+      dropdown                : 7000,
+      header                  : 6000,
+      footer                  : 5000
+);

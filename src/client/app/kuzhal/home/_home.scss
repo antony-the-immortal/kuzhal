@@ -1,0 +1,155 @@
+section.slice{	padding: 13px 5px;}
+section.slice h1{text-align : center;}
+.base {opacity :0.8;color: #333;}
+section.slice{ padding: 30px 0;}
+
+/*Carousel*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+div.slider { 
+  position: relative; 
+  width: 500%;
+  font-size: 0; 
+  animation: 30s slidy infinite;
+  height:auto; 
+}
+
+div.slider img { width: 100%; height: 100%;object-fit: cover;}
+div.slider figure figcaption { 
+  position: absolute; bottom: 10%; right : 20%;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 24px; padding: .6rem; 
+}
+div.slider figure { 
+  width: 20%; height: 455px;
+  display: inline-block;  position: inherit; 
+}
+.icon-block-body h4 {
+    padding-bottom:10px;
+    color: $organic-green;
+}
+
+ /* upto Small Devices, Tablets (portrait) */
+
+@media only screen and (max-width : 767px) {
+   div.slider figure { 
+  width: 20%; height: 200px;
+  display: inline-block;  position: inherit; 
+}
+
+}
+
+/*Carousel */
+.owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.owl-carousel .textoverlay{
+    position:absolute;
+    color:#FFF;
+   display:block;
+   z-index : 2;
+    background: rgba(0,0,0,0.4);
+        right: 1%;
+    top: 5%;
+    width: 43%;
+    height: 90%;
+    text-align: center;
+    padding : 20px;
+}
+.owl-carousel .textoverlay .shop-now-btn{
+  margin-top : 30px;
+  width : 200px;
+  font-size : 16px;
+}
+
+@media only screen and (max-width : 480px) {
+      
+    .owl-carousel .textoverlay{
+    position : relative;
+    color:#FFF;
+    display:block;
+    z-index : 2;
+    background: #333;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    padding : 20px;
+  }    
+  .owl-carousel .item img {
+  height : 180px;
+  }
+}
+#ourClass {
+  h2, h3 {
+    text-align: center;
+  }
+  h3 {
+    font-weight: normal;
+    font-weight: 300;
+  }
+  .music-classes {
+    margin-top : 45px;
+    text-align: center;
+    p.title {
+      font-weight: bold;
+      font-size: 18px;
+      color : #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  
+}
+#gallery {
+  h2, h3 {
+    text-align: center;
+  }
+  h3 {
+    font-weight: normal;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+}
+#instruments {
+  h2, h3 {
+    text-align: center;
+  }
+  h3 {
+    font-weight: normal;
+    font-weight: 300;
+  }
+  .instruments {
+    margin-top : 45px;
+    text-align: center;
+    p.title {
+      font-weight: bold;
+      font-size: 18px;
+      color : #fff;
+      text-align: center;
+      line-height: 15px !important;
+      margin: 10px 0 0 0;
+    }
+    p.sub-title {
+      text-align: center;
+      line-height: 15px !important;
+      margin: 10px 0;
+    }
+  }
+  
+}

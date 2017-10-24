@@ -1,0 +1,34 @@
+/* Forms and controls*/
+md-input-container{}
+md-input-container textarea.md-input{padding: 20px 5px 5px 35px;}
+ng-md-icon { fill : #3498db;}
+md-backdrop.md-opaque{background-color: rgba(255,255,255,.8)}
+md-dialog-content{color:#333;min-height: 150px;}
+md-bottom-sheet{display: flex;justify-content: space-around;padding:8px 16px;-webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);}
+md-dialog > form {overflow: hidden;}
+.ls-container{
+            height: 500px;
+ }
+ .md-button{text-transform: none; background-color: #3498db;color:#fff;}
+ 
+ .inputWidget.error ng-md-icon{ fill : red;}
+ .inputWidget.focused .errorMessageContainer{ display: none; }
+ .inputWidget.focused ng-md-icon{ fill : #3498db; }
+ .breadcrumb {
+    margin-top:20px;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 0;
+}
+.card{
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: #fff;
+    border-radius: 0;
+    padding:8px;
+    margin:10px;
+}
+.inputWidget .errorMessageContainer {display: none;} 
+.inputWidget.error .errorMessageContainer{display: block;} 

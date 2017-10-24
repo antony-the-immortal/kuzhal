@@ -1,0 +1,313 @@
+
+.md-button {
+    text-transform: none;
+}
+.md-button.go {
+    border-radius: 22px;
+    background-color: $go-green !important;
+}
+
+md-radio-group {
+    md-radio-button {
+        
+    }
+}
+div.inputWidget md-radio-button {
+    font-size: 16px;
+    line-height: 19px;
+}
+.optionCrossSale md-radio-button{
+    font-size: 14px !important;
+    line-height: 18px !important;
+    color: #333 !important;
+}
+md-radio-button .md-container {
+    top: 3px;
+    vertical-align: top;
+}
+md-radio-button.md-checked .md-on {
+    -webkit-transform: scale(0.9);
+    transform: scale(.9);
+}
+md-radio-button .md-off {
+    border: solid 1px;
+}
+md-radio-button .md-label {
+    margin-right: 15px;
+}
+div.inputWidget md-radio-button.overdraft {
+    font-size: 13px;
+    color: black;
+}
+ div.inputWidget md-radio-button.overdraft.saveListOptions{
+    padding-bottom: 0px !important;
+}
+md-radio-button.overdraft .yesNo {
+    font-size: 16px;
+    color: $infotext-blue;
+}
+md-radio-button.md-default-theme .md-off, md-switch.md-default-theme .md-switch-thumb .md-off {
+    border-color: #949494;
+}
+md-radio-button .md-off {
+    border: solid 0.1em;
+}
+md-radio-button.md-default-theme .md-container .md-ripple, md-switch.md-default-theme .md-switch-thumb .md-container .md-ripple {
+    color: $middle-blue;
+}
+md-radio-button.md-default-theme .md-on, md-switch.md-default-theme .md-switch-thumb .md-on {
+    background-color: $middle-blue;
+}
+md-radio-button.md-default-theme.md-checked .md-off, md-switch.md-default-theme .md-switch-thumb.md-checked .md-off {
+    border-color: $middle-blue;
+}
+md-radio-button.md-default-theme.md-checked .md-ink-ripple, md-switch.md-default-theme .md-switch-thumb.md-checked .md-ink-ripple {
+    color: $middle-blue;
+}
+md-radio-group {
+    border: none;
+}
+md-radio-group[layout=horizontal] md-radio-button {
+    padding-right: 10px;
+    width: 50%;
+}
+md-radio-button {
+    color: $infotext-blue;
+    padding-bottom: 8px;
+    margin: 10px 0 0 0;
+}
+md-radio-button .error {
+    color: $infotext-blue;
+}
+md-radio-button.check-card-small {
+    border: none;
+}
+md-radio-button.check-card-small .md-off {
+    border: none;
+}
+md-radio-button.check-card-small {
+    color: white;
+}
+md-radio-button.md-default-theme.check-card-small .md-on, md-switch.md-default-theme.check-card-small .md-switch-thumb .md-on {
+    background-color: white;
+    img {
+        border: solid 3px $progress-green;
+        border-radius: 8px;
+    }
+}
+md-radio-button.check-card-small.md-checked img {
+    border: solid 3px $progress-green;
+    border-radius: 8px;
+}
+
+md-radio-group.md-focused:not(:empty) .md-checked .md-container:before {
+  background: none !important;
+}
+md-checkbox.md-checked.md-focused .md-container:before{
+    background: none !important;
+}
+
+//md-radio-button.md-default-theme.md-checked, md-radio-button.md-checked .md-off {
+//    background-color: $middle-blue !important;
+//    border-color: $middle-blue !important;
+//}
+//
+//md-radio-button.md-default-theme, md-radio-button .md-on{
+//    background-color: $middle-blue !important;
+//}
+
+.progressBadge md-icon {
+    width: 49px;
+    height: 49px;
+}
+
+md-checkbox {
+    margin: 10px 0 4px 2px;
+    padding-bottom: 4px;
+    border-bottom: solid 2px transparent;
+}
+md-checkbox:focus {
+    border-bottom: solid 2px $middle-blue2;
+}
+md-checkbox.no-focus:focus {
+    border-bottom: none;
+}
+md-checkbox:focus .md-label {
+    border: solid 1px transparent !important;
+}
+md-checkbox.md-default-theme .md-icon {
+    border: solid 1px rgba(0, 0, 0, 0.54);
+    border-radius: 4px;
+}
+md-checkbox.md-default-theme.md-checked .md-icon {
+    background-color: #fff;
+}
+md-checkbox.md-default-theme.md-checked .md-icon::after {
+    border-color: $infotext-blue;
+    left: 5px;
+    top: 1px;
+}
+md-checkbox.md-default-theme .md-ripple {
+    color: $infotext-blue;
+}
+md-checkbox.md-default-theme.md-checked .md-ripple {
+    color: $infotext-blue;
+}
+
+/* The built in sizing for the progress indicator was terrible, so we overright the height/width calculations here withou our own */
+$usb-progress-circle-size: 66px;
+$usb-progress-circle-inset-size: 62px;
+$progress-circular-size: 72px;
+
+/* The USB loader simply wraps the md loader overlays an image in the middle of the loader */
+.usb-loader {
+    position: relative;
+    margin: 0 auto;
+    margin-top: $usb-progress-circle-size / 2 * -1;
+    width: $usb-progress-circle-size + 6;
+    height: $usb-progress-circle-size + 6;
+    .loading-badge {
+        position: absolute;
+        top: ($usb-progress-circle-size - $usb-progress-circle-inset-size) / 2 + 3;
+        left: ($usb-progress-circle-size - $usb-progress-circle-inset-size) / 2 + 3;
+        width: $usb-progress-circle-inset-size;
+        height: $usb-progress-circle-inset-size;
+        border-radius: 50%;
+        background-color: $logo-grey;
+        overflow: hidden;
+        img {
+            padding: 19px 12px;
+            width: 100%;
+        }
+    }
+}
+p.loadingMessage {
+    text-align: center;
+    margin: 20px 30px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+}
+
+
+/***
+ * Spinner customization
+ */
+md-progress-circular {
+    width: $progress-circular-size;
+    height: $progress-circular-size;
+    background-color: transparent;
+    overflow: visible;
+    .md-spinner-wrapper {
+        border-radius: 50%;
+        box-shadow: 0 0 20px #333;
+        background-color: #fff;
+    }
+    .md-inner {
+        width: $progress-circular-size;
+        height: $progress-circular-size;
+        .md-gap {
+            position: absolute;
+            left: $progress-circular-size * 0.5 - 1;
+            right: $progress-circular-size * 0.5 - 1;
+        }
+        .md-left, .md-right {
+            height: $progress-circular-size;
+            width: $progress-circular-size * 0.5;
+            .md-half-circle {
+                width: $progress-circular-size;
+                height: $progress-circular-size;
+                border-width: 8px;
+            }
+        }
+    }
+}
+md-progress-circular.md-usb-theme { 
+    .md-inner {
+        .md-gap {
+            border-top-color: $infotext-blue;
+            border-bottom-color: $infotext-blue;
+        }
+        .md-left, .md-right {
+            .md-half-circle {
+                border-top-color: $infotext-blue;
+            }
+        }
+        .md-right {
+            .md-half-circle {
+                border-right-color: $infotext-blue;
+            }
+        }
+        .md-left {
+            .md-half-circle {
+                border-left-color: $infotext-blue;
+            }
+        }
+    }
+}
+
+/* make the dialog box drap shadow tighter to the dialog */
+md-dialog {
+    box-shadow: 0px 6px 24px 0 #333;
+}
+/* no shadow on the bottomo sheet for desktop mode */
+@media (min-width: 768px) {
+    md-bottom-sheet.modalBtmShtSpecific {
+        box-shadow: none;
+    }
+}
+
+
+md-backdrop.md-opaque.md-default-theme {
+    background-color: rgba(50, 51, 60, .9);
+   
+}
+md-dialog md-dialog-content{
+    padding : 15px;
+}
+md-dialog .md-actions{
+    justify-content : space-between;
+    padding:0;
+    position : absolute;
+    bottom :5px;
+    width :94%;
+}
+md-dialog.md-default-theme, 
+md-dialog {
+   border-radius : 0px; 
+}
+
+md-dialog.overlay {
+    min-width: 0;
+    max-width: none;
+    max-height: none;
+    box-shadow: none;
+    position: static;
+}
+md-dialog.md-default-theme  {
+     
+    overflow: visible;
+}
+.md-dialog-container {
+    bottom: 0;
+}
+
+md-dialog md-content {
+    padding: 20px;
+}
+ng-md-icon{width: auto;
+    height: auto;
+    margin: 0 3px;
+}
+md-toolbar{
+    background-color : $z-dark-blue;
+}
+md-dialog .md-actions .md-button{
+    margin-right:0;
+    margin-left:0;
+}
+a.md-button, .md-button{
+    border-radius : 0px;
+}
+md-input-container [ng-message]{position : relative; padding-right:0px;}
+md-input-container [ng-message]:not(.md-char-counter) {padding-right:0;line-height:14px;margin-left:36px;margin-top:5px;}
