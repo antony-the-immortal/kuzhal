@@ -26019,12 +26019,13 @@ div.slider figure {
   .owl-carousel .item img {
     height: 180px; } }
 
-#ourClass h2, #ourClass h3 {
+.row.section h2, .row.section h3 {
   text-align: center; }
 
-#ourClass h3 {
+.row.section h3 {
   font-weight: normal;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-bottom: 25px; }
 
 #ourClass .music-classes {
   margin-top: 45px;
@@ -26036,12 +26037,7 @@ div.slider figure {
     text-align: center;
     margin-bottom: 15px; }
 
-#gallery h2, #gallery h3 {
-  text-align: center; }
-
 #gallery h3 {
-  font-weight: normal;
-  font-weight: 300;
   margin-bottom: 25px; }
 
 #instruments h2, #instruments h3 {
@@ -26064,7 +26060,29 @@ div.slider figure {
   #instruments .instruments p.sub-title {
     text-align: center;
     line-height: 15px !important;
-    margin: 10px 0; }
+    margin: 10px 0;
+    font-size: 14px; }
+
+#social object:first-of-type {
+  width: 100%;
+  height: 400px; }
+
+@media only screen and (max-width: 480px) {
+  #social object:first-of-type {
+    width: 100%;
+    height: 250px; } }
+
+#reachUs a {
+  color: #fff !important; }
+
+#reachUs object {
+  width: 100%;
+  height: 400px; }
+
+@media only screen and (max-width: 480px) {
+  #reachUs object:first-child {
+    width: 100%;
+    height: 250px; } }
 
 /**/
 .footer_ {
@@ -26380,8 +26398,29 @@ footer {
   line-height: 34px;
   margin: 0; }
 
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
 .navbar-header {
   float: none; }
+
+header,
+.navbar-default, .navbar-collapse.collapse.in {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent; }
+
+.navbar-default, .navbar-default .navbar-toggle {
+  border: none; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: transparent;
+  font-weight: 600; }
 
 /*End of auto complete*/
 @media (max-width: 991px) {
@@ -29031,6 +29070,11 @@ body {
   width: 100%;
   height: 600px; }
 
+p.title {
+  font-weight: bold;
+  color: #fff;
+  margin-top: 15px; }
+
 header {
   position: absolute;
   width: 100%; }
@@ -29043,14 +29087,6 @@ header {
 .no-padding-lr {
   padding-left: 0;
   padding-right: 0; }
-
-.navbar-default, .navbar-default .navbar-toggle {
-  background: transparent;
-  border: none; }
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #f00f0f;
-  background-color: transparent; }
 
 html,
 body,
@@ -29370,6 +29406,6 @@ h6 {
   margin-bottom: 10px; }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.3;
   text-align: justify; }

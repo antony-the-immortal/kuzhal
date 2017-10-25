@@ -1,17 +1,18 @@
 <div class="body-wrap">
-  <div class="jumbotron">
+  <div class="jumbotron"bid="home">
     <img src="images/backgrounds/kuzhal01-iso.jpg" alt="Slide background" class="kuzhal_bg img-responsive" />
   </div>
   <div id="aboutUs" class="row section">
     <div class="col-md-offset-1 col-md-5 col-xs-12">
       <img src="images/profile_pic.jpg" class="profile img-responsive">
+      <h2>Dr.T.S.Parthepan</h2>
     </div>
     <div class="col-md-6 col-xs-12 ">
         <h2 class="main-head">{{vm.landingPageContent.aboutUs.mainHeading}}</h2>
-        <h3 class="tag-head" ng-bind-html="vm.trustAsHTML(vm.landingPageContent.aboutUs.tagLine)"></h3>
-        <p>{{vm.landingPageContent.aboutUs.descr}}</p>
+        <h3 class="tag-head" ng-bind-html="vm.landingPageContent.aboutUs.tagLine"></h3>
+        <p ng-bind-html="vm.landingPageContent.aboutUs.descr">{{vm.landingPageContent.aboutUs.descr}}</p>
         <div class="col-xs-12 no-padding-lr" ng-repeat="item in vm.landingPageContent.aboutUs.sub">
-          <h3>{{item.heading}}</h3>
+          <p class="title text-left">{{item.heading}}</h3>
           <p>{{item.desc}}</p>
         </div>
     </div>
@@ -33,7 +34,7 @@
   <div id="gallery" class="row section">
       <div class="col-md-12 col-xs-12 ">
           <h2 class="main-head center">{{vm.landingPageContent.gallery.mainHeading}}</h2>
-          <h3 class="tag-head center" ng-bind-html="vm.trustAsHTML(vm.landingPageContent.gallery.tagLine)"></h3>
+          <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.gallery.tagLine"></h3>
       <owl-carousel-wrapper class="owl-carousel owl-theme">
           <!-- <div class="item"><div class="textoverlay"><h3>The worlds online market place lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h3><a href="/products"><md-button class="shop-now-btn">Shop Now</md-button></a></div><img src="images/slider/slider-1.jpg" alt="Slide background" /> <div class="textoverlay"><h3>The worlds online market place lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h3><a href="/products"><md-button class="shop-now-btn">Shop Now</md-button></a></div></div> -->
           <div class="item">
@@ -74,7 +75,7 @@
  <div id="instruments" class="row section">
     <div class="col-md-12 col-xs-12 ">
         <h2 class="main-head center">{{vm.landingPageContent.instruments.mainHeading}}</h2>
-        <h3 class="tag-head center" ng-bind-html="vm.trustAsHTML(vm.landingPageContent.instruments.tagLine)"></h3>
+        <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.instruments.tagLine"></h3>
         <div class="instruments grid" ng-repeat="item in vm.landingPageContent.instruments.items">
           <div class="col-md-3">
             <img class="img-thumbnail" ng-src="{{item.imagePath}}">
@@ -86,10 +87,38 @@
   </div>
 
   <div id="social" class="row section">
-  
-      <object width="620" height="485"
+      <h2 class="main-head center">{{vm.landingPageContent.social.mainHeading}}</h2>
+      <h3 class="tag-head center" ng-bind-html="vm.trustAsHTML(vm.landingPageContent.social.tagLine)"></h3>
+      <div class="col-md-8 col-xs-12">
+      <object 
       data="{{vm.landingPageContent.social.youtube.video}}">
       </object>
-      <object data="{{vm.landingPageContent.social.youtube.subscription}}"></object>
+      </div>
+      <div class="col-md-2 col-xs-12">
+        <h2>Visit us</h2>
+              <object data="{{vm.landingPageContent.social.youtube.subscription}}"></object>
+      </div>
   </div>
+  <div id="reachUs" class="row section">
+    <div class="col-md-8 col-xs-12">
+      <object 
+      data="{{vm.landingPageContent.social.gmap.urlWithKey}}">
+      </object>
+    </div>
+    <div class="col-md-4 col-xs-12">
+      <h2>Reach Us </h2>
+      <ul>
+          <li>
+              <address>
+                      {{ vm.kuzhalConstants.kuzhalData.address.addressLine1 }}<br>
+                      {{ vm.kuzhalConstants.kuzhalData.address.addressLine2 }}<br>
+                      {{ vm.kuzhalConstants.kuzhalData.address.city +' '+  vm.kuzhalConstants.kuzhalData.address.state +' - ' + vm.kuzhalConstants.kuzhalData.address.pinCode}}
+              </address> 
+          </li> 
+          <li >Phone: &nbsp;<span ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers"><a href="tel:{{phone}}" title="{{phone}}">{{phone }}</a>&nbsp;|</span></li>
+          <li>Email: <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="{{vm.kuzhalConstants.kuzhalData.email}}">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
+          <li></li>
+      </ul >
+    </div>
+   </div>
 </div>

@@ -45,3 +45,19 @@
 
   }
 })();
+
+$("nav > ul > li > a").on("click", function() {
+  $("nav > ul > li").removeClass('active');
+  $(this).parent('li').addClass('active');
+  var destination = $(this).attr('href');
+  $('html, body').animate({scrollTop: destination.offset().top}, 'slow');
+});
+
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 50) {
+     $('nav').addClass('fixed-header');
+  }
+  else {
+     $('nav').removeClass('fixed-header');
+  }
+});
