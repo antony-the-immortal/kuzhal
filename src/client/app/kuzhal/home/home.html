@@ -1,5 +1,5 @@
 <div class="body-wrap">
-  <div class="jumbotron"bid="home">
+  <div class="jumbotron" id="home">
     <img src="images/backgrounds/kuzhal01-iso.jpg" alt="Slide background" class="kuzhal_bg img-responsive" />
   </div>
   <div id="aboutUs" class="row section">
@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div id="ourClass" class="row section">
+  <div id="ourClass" class="row section bg">
       <div class="col-md-12 col-xs-12 ">
           <h2 class="main-head center">{{vm.landingPageContent.ourClasses.mainHeading}}</h2>
           <h3 class="tag-head center" ng-bind-html="vm.trustAsHTML(vm.landingPageContent.ourClasses.tagLine)"></h3>
@@ -72,7 +72,7 @@
       </div>
  </div>
 
- <div id="instruments" class="row section">
+ <div id="instruments" class="row section bg">
     <div class="col-md-12 col-xs-12 ">
         <h2 class="main-head center">{{vm.landingPageContent.instruments.mainHeading}}</h2>
         <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.instruments.tagLine"></h3>
@@ -99,14 +99,14 @@
               <object data="{{vm.landingPageContent.social.youtube.subscription}}"></object>
       </div>
   </div>
-  <div id="reachUs" class="row section">
+  <div id="reachUs" class="row section bg">
     <div class="col-md-8 col-xs-12">
       <object 
       data="{{vm.landingPageContent.social.gmap.urlWithKey}}">
       </object>
     </div>
     <div class="col-md-4 col-xs-12">
-      <h2>Reach Us </h2>
+      <h2 class="text-left">Reach Us </h2>
       <ul>
           <li>
               <address>

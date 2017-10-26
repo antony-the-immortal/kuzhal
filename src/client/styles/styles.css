@@ -26027,6 +26027,14 @@ div.slider figure {
   font-weight: 300;
   margin-bottom: 25px; }
 
+.row.section {
+  width: 95%;
+  margin: 25px auto;
+  padding: 25px 0; }
+
+.row.section.bg {
+  background: rgba(0, 0, 0, 0.5); }
+
 #ourClass .music-classes {
   margin-top: 45px;
   text-align: center; }
@@ -26586,6 +26594,23 @@ header,
 .user-name {
   padding: 5px;
   color: #ffe; }
+
+.back-to-top {
+  background: none;
+  margin: 0;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  display: none;
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent; }
+
+.back-to-top i {
+  font-size: 60px; }
 
 .spinner-container {
   border: none; }
@@ -29079,14 +29104,12 @@ header {
   position: absolute;
   width: 100%; }
 
-.row.section {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 25px 0; }
-
 .no-padding-lr {
   padding-left: 0;
   padding-right: 0; }
+
+.navbar-right {
+  margin-right: 0 !important; }
 
 html,
 body,
