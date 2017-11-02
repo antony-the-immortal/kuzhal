@@ -575,7 +575,7 @@ function startBrowserSync(isDev, specRunner) {
 
   var options = {
     proxy: 'localhost:' + port,
-    port: 3000,
+    port: 4200,
     files: isDev ?  [
             config.client + '**/*.*',
             '!' + config.sassSources,
@@ -590,7 +590,7 @@ function startBrowserSync(isDev, specRunner) {
     injectChanges: true,
     logFileChanges: true,
     logLevel: 'debug',
-    logPrefix: 'agro-kart',
+    logPrefix: 'kuzhal',
     notify: true,
     reloadDelay: 0 //1000
   };

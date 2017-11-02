@@ -1,5 +1,6 @@
-<section id="enrollment-form">
+<section id="enrollment-form" ng-controller="EnrollmentController as vm">
         <p class="pageHeading">{{vm.pageTitle}}</p>
+        <ng-md-icon icon="close" size="24" class="pull-right" ng-click="close()"></ng-md-icon>
   <div  flex-sm="100" flex-gt-sm="60" layout-sm="column">
   <!-- Sign-In form -->
       <md-content class="md-no-momentum" ng-if="!vm.loginFlags.forgotPwd">
@@ -16,7 +17,7 @@
               Stay sign-in
             </md-checkbox> -->
             </div>
-            <md-input-container class=" md-block">
+            <md-input-container class=" md-block footer">
                 <md-button class="md-raised md-primary md-block btn" ng-click="vm.loginUser(loginForm)">Login</md-button>
                 <md-button class="md-raised md-primary md-block btn" ng-click="vm.onPayment()">Online Payment</md-button>
                 <div aria-live="assertive" class="errorMessageContainer" ng-messages="loginForm.$error">

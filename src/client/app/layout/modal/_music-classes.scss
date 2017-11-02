@@ -1,0 +1,40 @@
+.modal.music-class-modal{
+    padding: 50px;
+    .modal-title {
+        text-align: center;
+    }
+    .modal-content {
+        background-image: url('../images/backgrounds/kuzhal_bg.jpg');
+    }
+    .modal-header {
+        background: rgba(0, 0, 0,  0.7);
+    }
+    .modal-header p {
+        margin: 15px 0;
+    }
+    
+    .syllabus {
+        margin: 20px 4%;
+        border: 2px solid;
+    }
+    object.video {
+        width : 100%;
+        height: 480px;
+        margin-top : 30px;
+    }
+} 
+
+@media screen and (max-width : 768px){
+    .modal.music-class-modal {
+        padding: 0;
+        .modal-dialog{
+            width : 100%;
+            padding: 0;
+        }
+        object.video {
+            width : 100%;
+            height: 250px;
+        }
+        
+    }
+}

@@ -4,6 +4,7 @@ body {
     background-image: url('../images/backgrounds/kuzhal_bg.jpg');
     top : 0 !important;
 }
+
 .jumptron > .kuzhal_bg {
     width : 100%;
     height: 600px;
@@ -17,19 +18,8 @@ p.title {
     width : 70%;
     margin : 5% auto;
 }
-.music-class-modal {
-    .modal-content {
-    background-image: url('../images/backgrounds/kuzhal_bg.jpg');
-    width : 70%;
-        height: 450px;
-    }
-    .modal-title {
-        text-align: center;
-    }
-    object.video {
-        width : 100%;
-        height: 480px;
-    }
+.modal-backdrop {
+    background: #fff;
 }
 .enrollment-form {
     .modal-dialog  {
@@ -41,5 +31,46 @@ p.title {
 form {
     .errorMessage  {
         margin-left: 35px;
+    }
+}
+
+@media screen and (max-width : 768px){
+    .modal {
+        padding : 0;
+        top: 0;
+        margin : 0;
+        overflow-y: auto !important;
+    }
+    .modal-dialog,
+    .enrollment-form .modal-dialog{
+        width : 100%;
+        min-height: 650px;
+        padding: 0;
+        margin : 0;
+    }
+    .enrollment-form {
+        .modal-dialog {
+        min-height: 400px;
+            }
+            .modal-content {
+                min-height: 615px;
+            }
+    md-input-container.footer {
+        position: fixed;
+        width: 95%;
+        bottom: 0;
+    }
+}
+       
+}
+
+@media screen and (max-width : 1024px) {
+    .jumptron{
+        height: 571px;
+        position: relative;
+    }
+    marquee {
+        position : absolute;
+        bottom: 0;
     }
 }
