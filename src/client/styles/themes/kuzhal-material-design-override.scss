@@ -1,0 +1,15 @@
+.md-dialog-container {
+    top: 10% !important;
+height: 70% !important;
+width: 80%;
+margin: 0 auto;
+left: 10% !important;
+background-image: url('../images/backgrounds/kuzhal_bg.jpg');
+}
+
+.md-toolbar-tools {
+    background: #333;
+}
+body.lightOverlay md-backdrop.md-opaque {
+    background : rgba(0, 0, 0, 0.87);
+}

@@ -1,7 +1,8 @@
 body {
     color: #fff;
     font-size: 16px;
-    background-image: url('../images/backgrounds/kuzhal_bg.jpg')
+    background-image: url('../images/backgrounds/kuzhal_bg.jpg');
+    top : 0 !important;
 }
 .jumptron > .kuzhal_bg {
     width : 100%;
@@ -11,4 +12,34 @@ p.title {
     font-weight: bold;
     color : #fff;
     margin-top:15px;
+}
+.modal-dialog{
+    width : 70%;
+    margin : 5% auto;
+}
+.music-class-modal {
+    .modal-content {
+    background-image: url('../images/backgrounds/kuzhal_bg.jpg');
+    width : 70%;
+        height: 450px;
+    }
+    .modal-title {
+        text-align: center;
+    }
+    object.video {
+        width : 100%;
+        height: 480px;
+    }
+}
+.enrollment-form {
+    .modal-dialog  {
+        width : 50%;
+        margin: 5% auto;
+    }
+}
+
+form {
+    .errorMessage  {
+        margin-left: 35px;
+    }
 }

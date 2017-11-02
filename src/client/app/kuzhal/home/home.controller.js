@@ -5,9 +5,9 @@
     .module('app.home')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['logger','$scope','$sce', 'session','constants','dataservice', '$rootScope', 'modalService' ,'cookie', 'landingPageContent', 'kuzhalConstants'];
+    HomeController.$inject = ['logger','$scope','$sce', 'session','constants','dataservice', '$rootScope', 'modalService' ,'cookie', 'landingPageContent', 'kuzhalConstants' ,'Map'];
   /* @ngInject */
-  function HomeController(logger,$scope, $sce, session,constants,dataservice,$rootScope, modalService, cookie, landingPageContent, kuzhalConstants) {
+  function HomeController(logger,$scope, $sce, session,constants,dataservice,$rootScope, modalService, cookie, landingPageContent, kuzhalConstants, Map) {
     var vm = this;
     vm.title = 'Home';
 
@@ -19,8 +19,10 @@
        // modalService.showModal('app/layout/login-modals/prompt-login.html', 'prompt-login');
       }
     }
-    vm.trustAsHtml = function(string){
-      return $sce.trustAsHtml(string);
+    vm.onShowOurClassModal = function(classObj) {
+      modalService.showModal('app/layout/modal/our-classes.modal.html', 'music-class-modal', classObj);
     }
+    //Map.init();
+    
   }
 })();

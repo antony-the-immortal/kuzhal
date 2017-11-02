@@ -14,7 +14,8 @@
       'blocks.logger',
       'blocks.router',
       'ui.router',
-      'ui.mask'
+      'ui.mask',
+      "ui.bootstrap"
 
     ]);
 })();

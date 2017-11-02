@@ -532,7 +532,9 @@ header,
    }
     
      
-    
+    .navbar-static-top {
+        z-index: 1 !important;
+    }
    .back-to-top i {
     
      font-size: 60px;

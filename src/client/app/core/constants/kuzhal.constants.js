@@ -13,7 +13,8 @@
             "city" :"Chennai",
             "state" : "Tamil Nadu",
             "pinCode" : "600100"
-          }
+          },
+          "paymentUrl" : "https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=804119"
         },
         "accredition" : {
           "1" : {

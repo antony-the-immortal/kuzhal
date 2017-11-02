@@ -66,6 +66,16 @@ footer {
             line-height: 20px !important;
         }
     }
+    img {
+        height: 60px;
+        vertical-align: top;
+        margin-top: 5px;
+    }
+    img.width55 {
+        height : 65px;
+        margin-top: 0;
+    }
+    
 }
 
  .col address {
@@ -130,4 +140,11 @@ footer {
     background: #cc181e;
     color: #fff
 }
+}
+
+#contactUs {
+    span {
+        display : block;
+        line-height: 1.7;
+    }
 }

@@ -5,9 +5,9 @@
     .module('app.layout')
     .controller('HeaderController', HeaderController);
 
-  HeaderController.$inject = ['logger','$state','$scope','$rootScope','kuzhalConstants', 'dataservice' ,'session', 'cookie', 'constants'];
+  HeaderController.$inject = ['logger','$state','$scope','$rootScope','modalService', 'kuzhalConstants', 'dataservice' ,'session', 'cookie', 'constants'];
   /* @ngInject */
-  function HeaderController(logger,$state,$scope, $rootScope ,kuzhalConstants, dataservice, session, cookie, constants) {
+  function HeaderController(logger, $state, $scope, $rootScope , modalService, kuzhalConstants, dataservice, session, cookie, constants) {
     var vm = this;
     vm.title = 'Header';
 
@@ -25,6 +25,9 @@
         session.set(constants.VIEW_CART_ITEMS, JSON.stringify(vm.myCart));
         $state.go('viewcart');
       }
+    }
+    vm.enroll = function() {
+      modalService.showModal('app/kuzhal/enrollment/enrollment.html', 'enrollment-form', '');
     }
     vm.toggle =function () {
       $('#sidebar-wrapper').toggleClass('toggled');

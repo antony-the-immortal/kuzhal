@@ -95,7 +95,19 @@ div.slider figure {
   height : 180px;
   }
 }
+marquee {
+    position: absolute;
+    top: 13%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
 
+}
+img.profile {
+  height: 450px;
+}
 .row.section {
   h2, h3 {
     text-align: center;
@@ -105,10 +117,15 @@ div.slider figure {
     font-weight: 300;
     margin-bottom: 25px;
   }
+  h2 {
+    span {
+      font-size: 16px;
+    }
+  }
 }
 .row.section{
-  width: 95%;
-  margin: 25px auto;
+  width: 100%;
+  margin: 25px 0 25px 0;
   
   padding: 25px 0;
 }
@@ -127,6 +144,9 @@ div.slider figure {
       text-align: center;
       margin-bottom: 15px;
     }
+  }
+  img {
+    cursor: pointer;
   }
   
 }
@@ -164,8 +184,8 @@ div.slider figure {
   
 }
 #social {
-  object:first-of-type {
-    width : 100%;
+  #youtube-video-container {
+    width : 100% !important;
     height : 400px;
   }
   @media only screen and (max-width : 480px) {
@@ -182,6 +202,11 @@ div.slider figure {
   object {
     width : 100%;
     height : 400px;
+  }
+  ul#reachUs-address {
+    li span {
+      display: block;
+    }
   }
   @media only screen and (max-width : 480px) {
     object:first-child {

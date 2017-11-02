@@ -1,0 +1,104 @@
+<section id="enrollment-form">
+        <p class="pageHeading">{{vm.pageTitle}}</p>
+  <div  flex-sm="100" flex-gt-sm="60" layout-sm="column">
+  <!-- Sign-In form -->
+      <md-content class="md-no-momentum" ng-if="!vm.loginFlags.forgotPwd">
+            <form role="form" name="loginForm" novalidate focus-error ng-if="!vm.userLogInStatus">
+            <div class="sign-in-form" ng-if="!vm.loginFlags.forgotPwd && !vm.loginFlags.verifyOTP">
+            <!-- <img class="circle-mask " src="/images/login/user.png "> -->
+            <ng-md-icon icon="account_circle" size="100" class="circle-mask "></ng-md-icon>
+            <md-input-container class="md-icon-float md-block" app-text-input="loginEmail" icon="email"
+            input-model="vm.signInData.emailId" placeholder-label="Email"></md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="password" icon="star_rate"
+            input-model="vm.signInData.passWd" placeholder-label="Password"></md-input-container>
+            <div class="md-icon-float md-block">
+            <!-- <md-checkbox ng-model="vm.setCookie" aria-label="Stay sign-in">
+              Stay sign-in
+            </md-checkbox> -->
+            </div>
+            <md-input-container class=" md-block">
+                <md-button class="md-raised md-primary md-block btn" ng-click="vm.loginUser(loginForm)">Login</md-button>
+                <md-button class="md-raised md-primary md-block btn" ng-click="vm.onPayment()">Online Payment</md-button>
+                <div aria-live="assertive" class="errorMessageContainer" ng-messages="loginForm.$error">
+                    <p class="errorMessage" ng-message="signInFailure">Something went wrong.Please try again with your correct credentials.</p>
+                </div>
+            </md-input-container>
+            <!-- <div>
+                <a href="#" ng-click="vm.switchView('signIn','signUp')"> New User?</a>
+                <a href="#" style="float:right" ng-click = "vm.switchView('signIn','forgotPwd')"> Forgot your password ? </a>
+            </div> -->
+            </div>
+            
+            <div ng-if="vm.loginFlags.verifyOTP">
+                <ng-md-icon icon="arrow_back" size="24" ng-click="vm.switchView('verifyOTP','signIn')"></ng-md-icon>
+                <p>Please verify your phone number by entering last 5-digits</p>
+                <span style="float:left;margin:5px;padding:5px;">+1 (774) 85</span>
+                <md-input-container class="md-icon-float md-block" style="float:left">
+                    <label>OTP</label>
+                    <input ng-model="vm.OTP" type="tel" size=5 maxlength ="5" required style="width:100px;">
+                </md-input-container>
+                <md-button class="md-raised md-primary md-block" ng-click="vm.validatePhoneNumber(loginForm)">Verify OTP</md-button>
+            </div>
+            <!-- Forget Password form-->
+            <div class="md-no-momentum" ng-if="vm.loginFlags.forgotPwd">
+            <a href="# " tabindex="-1" ng-click="vm.switchView('forgotPwd','signIn');vm.formReset(); ">
+                  <ng-md-icon icon="arrow_back" size="24"></ng-md-icon>
+            </a>
+            <br>
+            <p>Enter your email and password used at the time of Sign up</p>
+            <md-input-container class="md-icon-float md-block" app-text-input="email" icon="email"
+            input-model="vm.needPwd.emailId" placeholder-label="Email"></md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="phone" icon="phone"
+            input-model="vm.needPwd.phoneNumber" placeholder-label="Phone Number"></md-input-container>
+            <md-input-container class=" md-block"><md-button class="md-raised md-primary md-block btn" ng-click="vm.forgotPassword(loginForm)">Send Password</md-button></md-input-container>
+            </div>
+            </form>
+            <center><p ng-if="vm.userLogInStatus">Visit our <a href="products">Products</a> page.</p></center>
+      </md-content>
+      
+      <!-- Sign up form -->
+      <md-content class="md-no-momentum" ng-if="vm.loginFlags.signUp">
+           <form role="form" name="signUpForm" novalidate focus-error>
+            <div ng-if="!vm.loginFlags.signUpSuccess">
+            <md-input-container class="md-icon-float md-block" app-text-input="firstName" icon="person"
+            input-model="vm.userProfile.fullName.firstName" placeholder-label="First Name">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="middleName" icon="person"
+            input-model="vm.userProfile.fullName.middleName" placeholder-label="Middle Name">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="lastName" icon="person"
+            input-model="vm.userProfile.fullName.lastName" placeholder-label="Last Name">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="email" icon="email"
+            input-model="vm.userProfile.emailId" placeholder-label="Email">
+            <!-- <span ng-click="vm.validatePhoneEmail(signUpForm.email)">verify email</span>  -->
+            </md-input-container>
+
+            <md-input-container class="md-icon-float md-block" app-text-input="password" icon="star_rate"
+            input-model="vm.userProfile.passWd" placeholder-label="Password">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="confirmPassword" icon="star_rate" input-model="vm.confirmPassword" placeholder-label="Confirm Password">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" app-text-input="phone" icon="phone" input-model="vm.userProfile.phoneNo" placeholder-label="Phone Number">
+            </md-input-container>
+            <md-input-container class=" md-block">
+            <md-checkbox ng-model="vm.amFarmer" aria-label="Stay sign-in" ng-change="vm.setUserRoles(signUpForm)">
+              Am a Farmer as well
+            </md-checkbox>
+            </md-input-container>
+            <md-input-container class=" md-block">
+            <md-button class="md-raised md-primary md-block" ng-click="vm.signUpUser(signUpForm)">Sign In</md-button>
+            <center><a href='#' ng-click="vm.switchView('signUp','signIn')" style="margin:15px 0">Already a member?</a></center>
+            </md-input-container>
+            </div>
+            <div ng-if="vm.loginFlags.signUpSuccess">
+                <p>You've succcessfully signed up.Please verify your email and phone number on your first sign in</p>
+                <p>
+                <md-button class="md-raised md-primary md-block" ng-click="vm.switchView('signUp','signIn')" >Sign In</md-button>
+                </p>
+            </div>
+            </form>
+      </md-content>
+      </div>  
+  </div>
+</section>

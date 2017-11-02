@@ -25,11 +25,11 @@ jQuery(function ($) {
      * This part causes smooth scrolling using scrollto.js
      * We target all a tags inside the nav, and apply the scrollto.js to it.
      */
-    $(document).on("click", "nav a", function (e) {
+    $(document).on("click", "nav .navbar-right a", function (e) {
         e.preventDefault();
         var $el = $(this)
             , id = $el.attr('to');
-        $('nav li').removeClass('active');
+        $('nav .navbar-right li').removeClass('active');
         $el.parent('li').addClass('active');
         $('html, body').animate({
             scrollTop: $(id).offset().top - 50

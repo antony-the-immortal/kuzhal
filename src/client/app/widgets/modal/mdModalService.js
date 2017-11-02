@@ -1,17 +1,17 @@
 // factory
 angular
     .module('app.widgets')
-    .factory('modalService', modalService);
+    .factory('mdModalService', mdModalService);
 
-modalService.$inject = ['$rootScope', '$mdDialog', 'logger', 'session', 'dataservice','constants','$state'];
+    mdModalService.$inject = ['$rootScope', '$mdDialog', 'logger', 'session', 'dataservice','constants','$state'];
 /* @ngInject */
-function modalService($rootScope, $mdDialog, logger, session, dataservice, constants,$state) {
+function mdModalService($rootScope, $mdDialog, logger, session, dataservice, constants,$state) {
 
     return {
         showModal: showModal
     };
 
-    function showModal(templateUrl, templateName, app) {
+    function showModal(templateUrl, templateName, data) {
         angular.element('body').addClass('lightOverlay');
         $rootScope.$emit('modalOpen', templateName);
         $mdDialog.show({
@@ -19,10 +19,11 @@ function modalService($rootScope, $mdDialog, logger, session, dataservice, const
             clickOutsideToClose: false,
             escapeToClose: false,
             controller: ['$scope', function($scope) {
+                $scope.data = data;
                 $scope.close = function() {
                     $rootScope.$emit('modalClosed', templateName);
-                    $mdDialog.hide();
                     angular.element('body').removeAttr('style');
+                    $mdDialog.hide();
                 };
                 $scope.submit = function(form) {
                     form.$submitted = true;
@@ -31,10 +32,6 @@ function modalService($rootScope, $mdDialog, logger, session, dataservice, const
                             $mdDialog.hide();
                     }
                 };
-                $scope.login= function() {
-                  $scope.close();
-                  $state.go('login');
-                }
             }],
             bindToController: true
         }).finally(function() {
