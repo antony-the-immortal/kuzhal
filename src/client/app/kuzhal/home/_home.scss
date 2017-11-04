@@ -78,7 +78,7 @@ div.slider figure {
   font-size : 16px;
 }
 
-.jumpotron {
+.jumbotron {
   position: relative;
   height: 500px;
 }
@@ -167,6 +167,9 @@ img.profile {
       margin: 10px 0;
       font-size: 14px;
     }
+    .img-thumbnail {
+      height: 220px;
+    }
   }
   
 }
@@ -191,8 +194,9 @@ img.profile {
     height : 400px;
   }
   ul#reachUs-address {
-    li span {
+    li p {
       display: block;
+      line-height: 35px;
     }
   }
   @media only screen and (max-width : 480px) {

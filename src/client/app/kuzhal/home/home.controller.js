@@ -22,6 +22,10 @@
     vm.onShowOurClassModal = function(classObj) {
       modalService.showModal('app/layout/modal/our-classes.modal.html', 'music-class-modal', classObj);
     }
+
+    vm.onInstrumentsModal = function(item) {
+      modalService.showModal('app/layout/modal/instruments-modal.html', 'instruments-modal', item);
+    }
     //Map.init();
     
   }

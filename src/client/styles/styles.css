@@ -26092,7 +26092,7 @@ div.slider figure {
   width: 200px;
   font-size: 16px; }
 
-.jumpotron {
+.jumbotron {
   position: relative;
   height: 500px; }
 
@@ -26165,6 +26165,8 @@ img.profile {
     line-height: 15px !important;
     margin: 10px 0;
     font-size: 14px; }
+  #instruments .instruments .img-thumbnail {
+    height: 220px; }
 
 #social #youtube-video-container {
   width: 100% !important;
@@ -26182,8 +26184,9 @@ img.profile {
   width: 100%;
   height: 400px; }
 
-#reachUs ul#reachUs-address li span {
-  display: block; }
+#reachUs ul#reachUs-address li p {
+  display: block;
+  line-height: 35px; }
 
 @media only screen and (max-width: 480px) {
   #reachUs object:first-child {
@@ -26222,7 +26225,7 @@ footer:after {
   clear: both; }
 
 footer {
-  padding-top: 15px;
+  padding-top: 50px !important;
   padding-bottom: 20px;
   min-height: 30px;
   background: #262F36;
@@ -26759,6 +26762,10 @@ header,
     width: 100%;
     height: 480px;
     margin-top: 30px; }
+
+.instruments-modal .modal-header {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center; }
 
 @media screen and (max-width: 768px) {
   .modal.music-class-modal {
@@ -28943,6 +28950,12 @@ body.lightOverlay md-backdrop.md-opaque {
 /* upto Tablets (portrait & landscape) */
 /* Upto Large devices */
 /* Upto Large devices */
+/*  */
+@media only screen and (min-width: 1200px) {
+  .jumbotron {
+    height: 620px;
+    position: relative; } }
+
 /* Firefox tweaks */
 @-moz-document url-prefix() {
   /* get rid of the ugly dotted box on focused select boxes in FF and bemp the select text over to the left a bit */
@@ -28996,6 +29009,9 @@ body {
   font-size: 16px;
   background-image: url("../images/backgrounds/kuzhal_bg.jpg");
   top: 0 !important; }
+
+.kuzhal_bg {
+  background-image: url("../images/backgrounds/kuzhal_bg.jpg"); }
 
 .jumptron > .kuzhal_bg {
   width: 100%;

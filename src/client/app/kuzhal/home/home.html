@@ -80,7 +80,7 @@
         <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.instruments.tagLine"></h3>
         <div class="instruments grid" ng-repeat="item in vm.landingPageContent.instruments.items">
           <div class="col-md-3 col-sm-6">
-            <img class="img-thumbnail" ng-src="{{item.imagePath}}">
+            <img class="img-thumbnail" ng-src="{{item.imagePath}}" width="160px" ng-click="vm.onInstrumentsModal(item)">
             <p class="title">{{item.label}}</p>
             <p class="sub-title">From: {{item.price | currency : 'Rs.'}}</p>
           </div>
@@ -119,9 +119,11 @@
               </address> 
           </li> 
           <li >
-            <span ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers">
+            <br>
+            <p ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers">
               <a href="tel:{{phone}}" title="{{phone}}"><i class="fa fa-phone-square" aria-hidden="true"></i>
-              &nbsp;&nbsp;{{phone}}&nbsp;</a></span></li>
+              &nbsp;&nbsp;{{phone}}&nbsp;</a></p>
+          </li>
           <li>@ <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="{{vm.kuzhalConstants.kuzhalData.email}}">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
           <li></li>
       </ul >
