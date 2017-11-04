@@ -15,7 +15,8 @@
           </div>
           <div class="row" ng-if="showSyllabus">
             <div class="col-xs-12 col-md-11">
-                <object class="video" data="{{data.tutorial}}"></object>
+                <object ng-if="data.tutorial" class="video" data="{{data.tutorial}}"></object>
+                <p ng-if="!data.tutorial"><br> <br> No tutorials uploaded yet</p>
             </div>
               
           </div>

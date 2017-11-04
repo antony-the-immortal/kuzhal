@@ -238,7 +238,7 @@
                     "id": "lightmusic",
                     "name": "Light Music",
                     "imagePath": "images/classes/lightmusic.jpg",
-                    "video" : "https://www.youtube.com/embed/NE-FiKraKFc?rel=0",
+                    "tutorial" : "https://www.youtube.com/embed/NE-FiKraKFc?rel=0",
                     "desc": ["The style is a less \"serious\" form of Western classical music, featuring through-composed, usually shorter orchestral pieces and suites designed to appeal to a wider audience than more serious compositions."],
                     "syllabus": [{
                         "grade": "Grade 1",

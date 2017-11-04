@@ -26175,7 +26175,9 @@ img.profile {
 @media only screen and (max-width: 480px) {
   #social object:first-of-type {
     width: 100%;
-    height: 250px; } }
+    height: 250px; }
+  #social #youtube-video-container {
+    height: 250px !important; } }
 
 #reachUs a {
   color: #fff !important; }
@@ -26191,7 +26193,7 @@ img.profile {
 @media only screen and (max-width: 480px) {
   #reachUs object:first-child {
     width: 100%;
-    height: 250px; } }
+    height: 200px; } }
 
 @media only screen and (max-width: 480px) {
   .owl-carousel .textoverlay {
@@ -26210,107 +26212,6 @@ img.profile {
     position: fixed;
     bottom: 5%;
     top: auto; } }
-
-/**/
-.footer_ {
-  display: flex;
-  justify-content: space-around; }
-
-footer:before,
-footer:after {
-  display: table;
-  content: " "; }
-
-footer:after {
-  clear: both; }
-
-footer {
-  padding-top: 50px !important;
-  padding-bottom: 20px;
-  min-height: 30px;
-  background: #262F36;
-  color: #aaaaaa;
-  margin-top: 15px; }
-  footer .col.reset {
-    margin: 0; }
-  footer h4 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 500; }
-  footer .col p {
-    font-size: 13px;
-    margin-bottom: 10px; }
-  footer a {
-    text-decoration: none; }
-  footer a:hover {
-    text-decoration: none; }
-  footer .col ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  footer .col ul li span {
-    color: #fff; }
-  footer .accredition ul li {
-    display: inline-flex; }
-  footer .accredition ul div {
-    padding-left: 15px; }
-    footer .accredition ul div span {
-      display: block;
-      line-height: 20px !important; }
-  footer .accredition ul img {
-    height: 60px;
-    vertical-align: top;
-    margin-top: 5px; }
-  footer .accredition ul img.width55 {
-    height: 65px;
-    margin-top: 0; }
-  footer .col address {
-    color: #ddd;
-    padding: 8px 0; }
-  footer .company-info {
-    font-size: 10px;
-    text-align: justify; }
-  footer .company-info h2 {
-    font-size: 14px;
-    font-weight: 600; }
-  footer .col.col-social-icons i {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 18px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 2px;
-    font-family: "FontAwesome"; }
-  footer form {
-    margin-top: 20px; }
-  footer hr {
-    border-top: 1px solid #444; }
-  footer .copyright {
-    color: #fff;
-    font-size: 12px; }
-  footer .col-social-icons .facebook:hover {
-    background: #43609c;
-    color: #fff; }
-  footer .col-social-icons .twitter:hover {
-    background: #62addb;
-    color: #fff; }
-  footer .col-social-icons .google:hover {
-    background: #dd4b39;
-    color: #fff; }
-  footer .col-social-icons .youtube:hover {
-    background: #cc181e;
-    color: #fff; }
-
-#contactUs span {
-  display: block;
-  line-height: 1.7; }
 
 .nav .open > a {
   background-color: transparent; }
@@ -26776,6 +26677,107 @@ header,
     .modal.music-class-modal object.video {
       width: 100%;
       height: 250px; } }
+
+/**/
+.footer_ {
+  display: flex;
+  justify-content: space-around; }
+
+footer:before,
+footer:after {
+  display: table;
+  content: " "; }
+
+footer:after {
+  clear: both; }
+
+footer {
+  padding-top: 50px !important;
+  padding-bottom: 20px;
+  min-height: 30px;
+  background: #262F36;
+  color: #aaaaaa;
+  margin-top: 15px; }
+  footer .col.reset {
+    margin: 0; }
+  footer h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500; }
+  footer .col p {
+    font-size: 13px;
+    margin-bottom: 10px; }
+  footer a {
+    text-decoration: none; }
+  footer a:hover {
+    text-decoration: none; }
+  footer .col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  footer .col ul li span {
+    color: #fff; }
+  footer .accredition ul li {
+    display: inline-flex; }
+  footer .accredition ul div {
+    padding-left: 15px; }
+    footer .accredition ul div span {
+      display: block;
+      line-height: 20px !important; }
+  footer .accredition ul img {
+    height: 60px;
+    vertical-align: top;
+    margin-top: 5px; }
+  footer .accredition ul img.width55 {
+    height: 65px;
+    margin-top: 0; }
+  footer .col address {
+    color: #ddd;
+    padding: 8px 0; }
+  footer .company-info {
+    font-size: 10px;
+    text-align: justify; }
+  footer .company-info h2 {
+    font-size: 14px;
+    font-weight: 600; }
+  footer .col.col-social-icons i {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 2px;
+    font-family: "FontAwesome"; }
+  footer form {
+    margin-top: 20px; }
+  footer hr {
+    border-top: 1px solid #444; }
+  footer .copyright {
+    color: #fff;
+    font-size: 12px; }
+  footer .col-social-icons .facebook:hover {
+    background: #43609c;
+    color: #fff; }
+  footer .col-social-icons .twitter:hover {
+    background: #62addb;
+    color: #fff; }
+  footer .col-social-icons .google:hover {
+    background: #dd4b39;
+    color: #fff; }
+  footer .col-social-icons .youtube:hover {
+    background: #cc181e;
+    color: #fff; }
+
+#contactUs span {
+  display: block;
+  line-height: 1.7; }
 
 .spinner-container {
   border: none; }
