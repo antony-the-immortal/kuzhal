@@ -50,7 +50,7 @@
                 "classes": [{
                     "id": "vocal",
                     "name": "Vocal",
-                    "imagePath": "images/classes/vocal.jpg",
+                    "imagePath": "images/classes/vocal1.jpg",
                     "tutorial": "https://www.youtube.com/playlist?list=PLq2pC9LK8Wg2vr9sqHe4x_3CHcbNtHJ7I",
                     "desc": ["In many traditional cultures, Vocal have a symbolic function and are used in religious ceremonies. Vocal are often used in music therapy, vocal music is probably the oldest form of music, since it does not require any instrument besides the human voice."],
                     "syllabus": [{
