@@ -11,9 +11,10 @@
                 restrict: 'E',
                 link: function(scope, element, attrs) {
                     var options = {
-                        autoplay: 1500,
+                        autoplay: 700,
+                        loop:true,
                         stopOnHover: true,
-                        autoplaySpeed: 1500,
+                        autoplaySpeed: 700,
                         paginationSpeed: 1000,
                         singleItem: true,
                         items : 1

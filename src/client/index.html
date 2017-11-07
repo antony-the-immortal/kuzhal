@@ -15,6 +15,7 @@
   </title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <link rel="icon" href="../images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <base href="/">
   
@@ -31,6 +32,7 @@
 </head>
 
 <body>
+
   <div>
     <div ng-include="'app/layout/shell/shell.html'"></div>
   </div>
@@ -146,9 +148,17 @@
   <!-- endbuild -->
 
   <script src="https://www.youtube.com/iframe_api"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPR6zPXtIspAs3ompKuu4fIYumXsVzbWw?sensor=true&libraries=places"
-  async defer></script> -->
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <script src="https://connect.facebook.net/en_US/sdk.js"></script>
   
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>

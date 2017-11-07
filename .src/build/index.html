@@ -21,31 +21,31 @@
   
   
 
-  <link rel="stylesheet" href="styles/app-2c6d2d4fa1.css">
+  <link rel="stylesheet" href="styles/app-eaef41f72f.css">
   <!-- Essential styles-->
 </head>
 
 <body>
-
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   <div>
     <div ng-include="'app/layout/shell/shell.html'"></div>
   </div>
   <script src="js/lib-8542b208ba.js"></script>
 
-  <script src="js/app-360df515b5.js"></script>
+  <script src="js/app-8669bed943.js"></script>
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <script src="https://apis.google.com/js/platform.js"></script>
-  <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPR6zPXtIspAs3ompKuu4fIYumXsVzbWw?sensor=true&libraries=places"
+  async defer></script> -->
   
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>

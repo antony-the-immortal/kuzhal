@@ -20,6 +20,7 @@ function showModal(templateUrl, templateName, data) {
         windowClass: templateName, // windowClass - additional CSS class(es) to be added to a modal window template
         controller: function ($scope, $uibModalInstance, $log, user) {
             $scope.data = user;
+            $scope.showTutorial = true;
             $scope.submit = function () {
                 $uibModalInstance.dismiss('cancel'); // dismiss(reason) - a method that can be used to dismiss a modal, passing a reason
             }

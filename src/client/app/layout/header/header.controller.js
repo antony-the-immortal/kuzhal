@@ -5,9 +5,9 @@
     .module('app.layout')
     .controller('HeaderController', HeaderController);
 
-  HeaderController.$inject = ['logger','$state','$scope','$rootScope','modalService', 'kuzhalConstants', 'dataservice' ,'session', 'cookie', 'constants'];
+  HeaderController.$inject = ['logger','$state','$scope','$rootScope', '$window','modalService', 'kuzhalConstants', 'dataservice' ,'session', 'cookie', 'constants'];
   /* @ngInject */
-  function HeaderController(logger, $state, $scope, $rootScope , modalService, kuzhalConstants, dataservice, session, cookie, constants) {
+  function HeaderController(logger, $state, $scope, $rootScope , $window, modalService, kuzhalConstants, dataservice, session, cookie, constants) {
     var vm = this;
     vm.title = 'Header';
 
@@ -32,6 +32,10 @@
     vm.toggle =function () {
       $('#sidebar-wrapper').toggleClass('toggled');
     }
+    vm.onPayment = function() {
+      $window.open(vm.kuzhalConstants.kuzhalData.paymentUrl, "_blank");
+    }
+
     $scope.$on('hideNavigation',function(event,argument) {
       $('#sidebar-wrapper').removeClass('toggled');
     });

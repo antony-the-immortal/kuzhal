@@ -1,15 +1,16 @@
 <section id="enrollment-form" ng-controller="EnrollmentController as vm">
         <p class="pageHeading">{{vm.pageTitle}}</p>
-        <ng-md-icon icon="close" size="24" class="pull-right" ng-click="close()"></ng-md-icon>
+        
   <div  flex-sm="100" flex-gt-sm="60" layout-sm="column">
   <!-- Sign-In form -->
       <md-content class="md-no-momentum" ng-if="!vm.loginFlags.forgotPwd">
+            <ng-md-icon icon="close" size="24" class="pull-right" ng-click="close()"></ng-md-icon>
             <form role="form" name="loginForm" novalidate focus-error ng-if="!vm.userLogInStatus">
             <div class="sign-in-form" ng-if="!vm.loginFlags.forgotPwd && !vm.loginFlags.verifyOTP">
             <!-- <img class="circle-mask " src="/images/login/user.png "> -->
             <ng-md-icon icon="account_circle" size="100" class="circle-mask "></ng-md-icon>
             <md-input-container class="md-icon-float md-block" app-text-input="loginEmail" icon="email"
-            input-model="vm.signInData.emailId" placeholder-label="Email"></md-input-container>
+            input-model="vm.signInData.emailId" placeholder-label="User Name"></md-input-container>
             <md-input-container class="md-icon-float md-block" app-text-input="password" icon="star_rate"
             input-model="vm.signInData.passWd" placeholder-label="Password"></md-input-container>
             <div class="md-icon-float md-block">
@@ -19,7 +20,6 @@
             </div>
             <md-input-container class=" md-block footer">
                 <md-button class="md-raised md-primary md-block btn" ng-click="vm.loginUser(loginForm)">Login</md-button>
-                <md-button class="md-raised md-primary md-block btn" ng-click="vm.onPayment()">Online Payment</md-button>
                 <div aria-live="assertive" class="errorMessageContainer" ng-messages="loginForm.$error">
                     <p class="errorMessage" ng-message="signInFailure">Something went wrong.Please try again with your correct credentials.</p>
                 </div>

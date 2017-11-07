@@ -26,15 +26,18 @@ jQuery(function ($) {
      * We target all a tags inside the nav, and apply the scrollto.js to it.
      */
     $(document).on("click", "nav .navbar-right a", function (e) {
-        e.preventDefault();
-        var $el = $(this)
-            , id = $el.attr('to');
-        $('nav .navbar-right li').removeClass('active');
-        $el.parent('li').addClass('active');
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - 50
-        }, 1000);
-        return false;
+        if(!$(this).hasClass('no-click-nav')) {
+            e.preventDefault();
+            var $el = $(this)
+                , id = $el.attr('to');
+            $('nav .navbar-right li').removeClass('active');
+            $el.parent('li').addClass('active');
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - 50
+            }, 1000);
+            return false; 
+        }
+        
     });
     $(document).on("click", ".back-to-top", function (e) {
         $('html, body').animate({scrollTop: 0}, 1000);

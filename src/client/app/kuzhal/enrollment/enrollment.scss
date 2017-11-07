@@ -9,7 +9,11 @@
         z-index: 100;
         margin-bottom: 10px;
       }
-    
+    ng-md-icon[icon="close"] {
+      position: absolute;
+      right: 2%;
+      z-index: 1;
+  }
 }
 
 

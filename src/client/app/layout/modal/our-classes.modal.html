@@ -5,23 +5,29 @@
         </div>
         <div class="modal-body">
         <p ng-repeat="desc in data.desc">{{ desc }}</p>
-          <div class="row" ng-if="!showSyllabus">
-              <div class="col-md-5 col-xs-11 syllabus" ng-repeat="syllabi in data.syllabus">
-                  <h3>{{syllabi.grade}}</h3>
-                  <ol id="syllabus">
-                      <li ng-repeat="level in syllabi.content"> {{ level }}</li>
-                  </ol>
-              </div>
-          </div>
-          <div class="row" ng-if="showSyllabus">
-            <div class="col-xs-12 col-md-11">
+        <div class="row" ng-if="showTutorial">
+            <div class="col-xs-12 col-md-12">
                 <object ng-if="data.tutorial" class="video" data="{{data.tutorial}}"></object>
                 <p ng-if="!data.tutorial"><br> <br> No tutorials uploaded yet</p>
             </div>
               
           </div>
+          <div class="row" ng-if="!showTutorial">
+                <div class="col-md-12 col-xs-12">
+                        <p ng-if="!data.syllabus"><br> <br> No Syllabus uploaded yet</p>
+                </div>
+                
+              <div class="col-md-5 col-xs-12 syllabus" ng-repeat="syllabi in data.syllabus">
+                  <h3>{{syllabi.grade}}</h3>
+                  
+                  <ol id="syllabus">
+                      <li ng-repeat="level in syllabi.content"> {{ level }}</li>
+                  </ol>
+              </div>
+          </div>
+          
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-success pull-left" ng-click="showSyllabus = !showSyllabus" ng-bind-html="showSyllabus ? 'Syllabus' : 'Tutorial Videos'"> Syllabus</button>
+            <button type="button" class="btn btn-success pull-left" ng-click="showTutorial = !showTutorial" ng-bind-html="showTutorial ?  'Syllabus' : 'Tutorial Videos'"> </button>
             <button type="button" class="btn btn-default pull-right" ng-click="close()" > Close</button>
         </div>

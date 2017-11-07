@@ -80,20 +80,42 @@ div.slider figure {
 
 .jumbotron {
   position: relative;
-  height: 500px;
-}
-marquee {
+  img {
+    height: 740px;
+    width: 100%;
+  }
+  .reachUs {
+    position: absolute;
+    top:55%;
+    right : 5%;
+    h2 {
+      text-align: center;
+    }
+    p {
+      background: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+  }
+  marquee {
     position: absolute;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
-    color: black;
+    color: yellow;
     font-size: 16px;
     font-weight: 400;
+    width : 40%;
+    margin: 0 30%;
 
 }
+  
+}
+
 img.profile {
-  height: 450px;
+  height: 500px;
+  margin: 0 auto;
 }
 .row.section {
   h2, h3 {
@@ -109,15 +131,21 @@ img.profile {
       font-size: 16px;
     }
   }
+  p{
+    font-size: 19px;
+  }
 }
 .row.section{
   width: 100%;
   margin: 25px 0 25px 0;
   
-  padding: 25px 0;
+  
 }
 .row.section.bg {
   background: rgba(0, 0, 0, 0.5);
+}
+#aboutUs {
+  padding: 7% 0 10% 0;
 }
 #ourClass {
   
@@ -138,11 +166,13 @@ img.profile {
   
 }
 #gallery {
+  padding: 10% 0 10% 0;
   h3 {
     margin-bottom: 25px;
   }
 }
 #instruments {
+  padding: 40px 0 0 0;
   h2, h3 {
     text-align: center;
   }
@@ -174,6 +204,7 @@ img.profile {
   
 }
 #social {
+  padding: 10% 0 10% 0;
   #youtube-video-container {
     width : 100% !important;
     height : 400px;
@@ -194,10 +225,18 @@ img.profile {
     width : 100%;
     height : 400px;
   }
+  address {
+    font-size: 18px;
+  }
   ul#reachUs-address {
     li p {
       display: block;
       line-height: 35px;
+      font-size: 24px;
+      padding: 5px 10px;
+      background: #287db0 !important;
+      margin : 10px 0;
+      border-radius: 5px;
     }
   }
   @media only screen and (max-width : 480px) {
@@ -229,5 +268,21 @@ marquee {
   position: fixed;
   bottom : 5%;
   top : auto;
+  width : 100%;
 }
+}
+@media only screen and (min-width : 1200px) {
+  marquee {
+    width : 40%;
+    margin : 0 30%;
+  }
+  #aboutUs {
+    padding-top:7%;
+  }
+  #gallery{
+    padding-top:3%;
+  }
+  #social {
+    padding-top: 5%;
+  }
 }

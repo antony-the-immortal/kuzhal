@@ -12,14 +12,14 @@ footer:after {
     clear: both
 }
 footer {
-    padding-top: 50px !important;
-    padding-bottom: 20px;
-    min-height: 30px;
+    padding: 100px 0 !important;
+    min-height: 500px;
     background: $darker-grey;
-	color: #aaaaaa;
+    color: #aaaaaa;
+    font-size: 16px;
 	margin-top:15px;
-
-
+    
+}
  .col.reset {
     margin: 0
 }
@@ -139,7 +139,6 @@ footer {
 .col-social-icons .youtube:hover {
     background: #cc181e;
     color: #fff
-}
 }
 
 #contactUs {

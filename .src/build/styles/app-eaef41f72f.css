@@ -29208,9 +29208,7 @@ header {
 
 #syllabus {
   padding-left: 20px;
-  list-style-type: decimal;
-  font-size: 16px;
-  font-weight: 500; }
+  list-style-type: decimal; }
 
 md-input-container .md-input,
 md-input-container:not(.md-input-invalid).md-input-has-value label,

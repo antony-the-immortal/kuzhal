@@ -34,7 +34,8 @@
                 "youtube": {
                     "subscription": "https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UC4xZLvCLQ1Bas8ZOdxU8iUg&layout=full&count=hidden&theme=dark&origin=https%3A%2F%2Fkuzhal.in&gsrc=3p&ic=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.NgV8rtoUnnw.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCOxmWjbT0ppiQ3yLx8uFiX6FlGIZQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&id=I0_1508784854290&parent=https%3A%2F%2Fkuzhal.in&pfname=&rpctoken=19364368",
                     "videoID": "tqT8zhqFplI",
-                    "video": "https://www.youtube-nocookie.com/embed/tqT8zhqFplI?rel=0"
+                    "video": "https://www.youtube.com/embed/tqT8zhqFplI?rel=0"
+                    
                 },
                 "gmap": {
                     "apiKey": "AIzaSyDPR6zPXtIspAs3ompKuu4fIYumXsVzbWw,",
@@ -50,24 +51,29 @@
                 "classes": [{
                     "id": "vocal",
                     "name": "Vocal",
-                    "imagePath": "images/classes/vocal1.jpg",
+                    /* "imagePath": "images/classes/vocal_class.jpg", */
+                    "imagePath": "images/classes/violin.jpg",
                     "tutorial": "https://www.youtube.com/playlist?list=PLq2pC9LK8Wg2vr9sqHe4x_3CHcbNtHJ7I",
                     "desc": ["In many traditional cultures, Vocal have a symbolic function and are used in religious ceremonies. Vocal are often used in music therapy, vocal music is probably the oldest form of music, since it does not require any instrument besides the human voice."],
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchari Geetham", "Thevaram"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Thattu Varisaigal - 2", "Alangarangal", "Sanchari Geetham - 2", "Swarajati -1", "Thevaram"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Thirupugazh - 1", "Divya prabandam - 1", "Lakshana Geetham - 1", "Jatiswaram", "Thiruvarutpa"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Tana Varnam", "Ata Tala Varnam", "Alwar Pesuram"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Tamizh Krithis", "Krithis", "Kavadichindhu"]
                     }]
                 },
                 {
@@ -77,22 +83,26 @@
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg2y4TqYPKjb4mFfjOSHaYGS",
                     "desc": ["The violin can be a very intimidating musical instrument to begin – Beyond the technical challenges there are the simple logistics of finding the right instrument, teacher, music books and more. What if you could take away all those worries? For one week in a group camp setting, your child could have use of a violin, have music and assignments printed out for them, and learn about making music in a fun, low-pressure setting with their peers. In small group classes of similar age kids, the students quickly learn the most important aspects of music and violin playing through great music and fun games.",
                             "Our Violin Programme teaches students the basics of playing on the violin, getting to know the scales and strings, understanding the bow and how to use it, as well as how to take care of the violin and its various components."],
-                    "syllabus": [{
-                        "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    }]
+                            "syllabus": [{
+                                "grade": "Grade 1",
+                                "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchari Geetham", "Thevaram"]
+                            },
+                            {
+                                "grade": "Grade 2",
+                                "content": ["Thattu Varisaigal - 2", "Alangarangal", "Sanchari Geetham - 2", "Swarajati -1", "Thevaram"]
+                            },
+                            {
+                                "grade": "Grade 3",
+                                "content": ["Thirupugazh - 1", "Divya prabandam - 1", "Lakshana Geetham - 1", "Jatiswaram", "Thiruvarutpa"]
+                            },
+                            {
+                                "grade": "Grade 4",
+                                "content": ["Tana Varnam", "Ata Tala Varnam", "Alwar Pesuram"]
+                            },
+                            {
+                                "grade": "Grade 5",
+                                "content": ["Tamizh Krithis", "Krithis", "Kavadichindhu"]
+                            }]
                 },
                 {
                     "id": "veena",
@@ -103,19 +113,23 @@
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg1ccQpY16LZVFI_Mhagvhhb",
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisaigal", "Jandai Varisaigal", "Melsthayi Varisai", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alankarangal"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": [ "Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Athi thaala Varnam"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Athi thaala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4","Thirupugazh - 1"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -125,19 +139,23 @@
                     "desc": ["Our Saxophone Programme teaches students how to be able to achieve the learning goals above, through the use of simple and easy-to-understand learning materials and teaching techniques.Our professional Saxophone instructors are experienced in guiding students who have no prior background knowledge. For those who have some Saxophone skills and experience, our instructors will help them achieve their potential. To find out more, feel free to drop us an enquiry."],
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisaigal", "Jandai Varisaigal", "Melsthayi Varisai", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alankarangal"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": [ "Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Athi thaala Varnam"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Athi thaala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4","Thirupugazh - 1"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -149,19 +167,23 @@
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg3IDYqVQwEsjKcjLJpQ9pB7",
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisaigal", "Jandai Varisaigal", "Melsthayi Varisai", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alankarangal"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": [ "Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Athi thaala Varnam"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Athi thaala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4","Thirupugazh - 1"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -173,19 +195,23 @@
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg20f_Ngxrl7y7ljrv2Osxm6",
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisaigal", "Jandai Varisaigal", "Melsthayi Varisai", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alankarangal"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": [ "Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Athi thaala Varnam"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Athi thaala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4","Thirupugazh - 1"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -195,44 +221,14 @@
                     "desc": [ "Flute, one of the most beautiful and enchanted sound created. With it’s mid to high pitch sound, it’s often relate to singing of the birds, painting a beautiful picture of an enchanted forest with trees, flowers, waterfalls and streams. Aside from the voice, flutes are the earliest known musical instruments. A number of flutes dating to about 35,000 to 40,000 years ago have been found in the Swabian Alb region of Germany. These flutes demonstrate that a developed musical tradition existed from the earliest period of modern human presence in Europe.",
                     "Our professional Flute instructors are experienced in guiding students with no prior background knowledge. For those who have some Flute skills and experience, our instructors will help them achieve their potential in expressing themselves fully."],
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg2oXYyfITJMPam7UiDHAe97",
-                    "syllabus": [{
-                        "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    }]
+                    "syllabus": null
                 },
                 {
                     "id": "drums",
                     "name": "Drums",
                     "imagePath": "images/classes/drums.jpg",
                     "desc": ["Drums are usually played by striking with the hand, or with one or two sticks. In many traditional cultures, drums have a symbolic function and are used in religious ceremonies. Drums are often used in music therapy, especially hand drums, because of their tactile nature and easy use by a wide variety of people. The drum head has the most effect on how a drum sounds. Each type of drum head serves its own musical purpose and has its own unique sound. Our professional drum instructors are experienced in guiding students who have no prior background knowledge."],
-                    "syllabus": [{
-                        "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    },
-                    {
-                        "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
-                    }]
+                    "syllabus": null
                 },
                 {
                     "id": "lightmusic",
@@ -242,19 +238,19 @@
                     "desc": ["The style is a less \"serious\" form of Western classical music, featuring through-composed, usually shorter orchestral pieces and suites designed to appeal to a wider audience than more serious compositions."],
                     "syllabus": [{
                         "grade": "Grade 1",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai"]
                     },
                     {
                         "grade": "Grade 2",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Dhattu Varisai", "Alankaram", "Sanchari Geetham", "Thevaram"]
                     },
                     {
                         "grade": "Grade 3",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Voice Testing", "Mic Testing", "Scale(Sruthi) Testing"]
                     },
                     {
                         "grade": "Grade 4",
-                        "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchani Geetham", "Thevaram"]
+                        "content": ["Tempo Testing", "Pronounciation Testing", "Confidence"]
                     }]
                 }]
             },
