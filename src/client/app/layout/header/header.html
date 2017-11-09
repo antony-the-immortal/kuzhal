@@ -8,10 +8,10 @@
             <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="Email Us">{{vm.kuzhalConstants.kuzhalData.email}} </a><b> | <a href="tel:{{vm.kuzhalConstants.kuzhalData.phoneNumbers[0]}}" title="Call Us">{{vm.kuzhalConstants.kuzhalData.phoneNumbers[0]}}</a> </b>
         </div>
         <div class="social-media pull-right">
-          <a href="#"><i class="fa fa-facebook facebook"></i></a> 
+          <a ng-href="{{vm.kuzhalConstants.social.facebook}}" target="_blank"><i class="fa fa-facebook facebook"></i></a> 
           <!-- <a href="#"><i class="fa fa-google-plus google"></i></a> 
           <a href="#"><i class="fa fa-twitter twitter"></i></a> -->
-           <a href="#"><i class="fa fa-youtube youtube"></i></a>
+           <a ng-href="{{vm.kuzhalConstants.social.youtube}}"  target="_blank"><i class="fa fa-youtube youtube"></i></a>
           </div>
         <div class="user-name pull-right" ng-if="vm.userName">Welcome {{vm.userName.emailId}}</div>
     </div>

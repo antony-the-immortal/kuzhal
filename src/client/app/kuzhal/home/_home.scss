@@ -81,26 +81,26 @@ div.slider figure {
 .jumbotron {
   position: relative;
   img {
-    height: 740px;
+    height: 820px;
     width: 100%;
   }
   .reachUs {
     position: absolute;
     top:55%;
     right : 5%;
+    text-align: center;
     h2 {
       text-align: center;
+      font-size: 32px;
     }
-    p {
-      background: #fff;
-      padding: 5px;
-      border-radius: 5px;
+    button {
+      font-size: 24px;
       font-weight: 500;
     }
   }
   marquee {
     position: absolute;
-    bottom: 0;
+    bottom: 4%;
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     color: yellow;
@@ -269,6 +269,25 @@ marquee {
   bottom : 5%;
   top : auto;
   width : 100%;
+}
+.jumbotron .reachUs {
+  
+    bottom: 15%;
+    left: 10.5%;
+}
+}
+@media only screen and (max-width:768px) {
+  .jumbotron marquee {
+    width: 100%;
+    margin: 0;
+    bottom : 19%;
+  }
+  .jumbotron .reachUs {
+    bottom: 25%;
+    margin: auto;
+    left: 30%;
+    right: auto;
+    top : auto;
 }
 }
 @media only screen and (min-width : 1200px) {

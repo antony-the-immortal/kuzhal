@@ -25,7 +25,7 @@ jQuery(function ($) {
      * This part causes smooth scrolling using scrollto.js
      * We target all a tags inside the nav, and apply the scrollto.js to it.
      */
-    $(document).on("click", "nav .navbar-right a", function (e) {
+    $(document).on("click", "nav .navbar-right a, .btn.btn-reachUs", function (e) {
         if(!$(this).hasClass('no-click-nav')) {
             e.preventDefault();
             var $el = $(this)

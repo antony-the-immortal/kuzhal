@@ -85,23 +85,23 @@
                             "Our Violin Programme teaches students the basics of playing on the violin, getting to know the scales and strings, understanding the bow and how to use it, as well as how to take care of the violin and its various components."],
                             "syllabus": [{
                                 "grade": "Grade 1",
-                                "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Sanchari Geetham", "Thevaram"]
+                                "content": ["Sarali Varisai", "Jandai Varisai", "Melsthayi", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alangarangal"]
                             },
                             {
                                 "grade": "Grade 2",
-                                "content": ["Thattu Varisaigal - 2", "Alangarangal", "Sanchari Geetham - 2", "Swarajati -1", "Thevaram"]
+                                "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
                             },
                             {
                                 "grade": "Grade 3",
-                                "content": ["Thirupugazh - 1", "Divya prabandam - 1", "Lakshana Geetham - 1", "Jatiswaram", "Thiruvarutpa"]
+                                "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Ata Tala Varnam"]
                             },
                             {
                                 "grade": "Grade 4",
-                                "content": ["Tana Varnam", "Ata Tala Varnam", "Alwar Pesuram"]
+                                "content": ["Ata Tala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4", "Thiruppugazh - 1"]
                             },
                             {
                                 "grade": "Grade 5",
-                                "content": ["Tamizh Krithis", "Krithis", "Kavadichindhu"]
+                                "content": ["Tana Varnam - 2", "Navaragamaliga Varnam -1", "Keethanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                             }]
                 },
                 {
@@ -129,7 +129,7 @@
                     },
                     {
                         "grade": "Grade 5",
-                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam -1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -155,7 +155,7 @@
                     },
                     {
                         "grade": "Grade 5",
-                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam -1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -183,7 +183,7 @@
                     },
                     {
                         "grade": "Grade 5",
-                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam -1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -211,7 +211,7 @@
                     },
                     {
                         "grade": "Grade 5",
-                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam - 1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam -1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
                     }]
                 },
                 {
@@ -281,7 +281,7 @@
                     },
                     "guitar": {
                         "label": "Guitar",
-                        "price": "5000",
+                        "price": "4999",
                         "imagePath": "images/instruments/guitar_lg.jpg"
                     },
                     "tanpura": {

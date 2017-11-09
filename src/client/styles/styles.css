@@ -26099,22 +26099,22 @@ div.slider figure {
 .jumbotron {
   position: relative; }
   .jumbotron img {
-    height: 740px;
+    height: 820px;
     width: 100%; }
   .jumbotron .reachUs {
     position: absolute;
     top: 55%;
-    right: 5%; }
+    right: 5%;
+    text-align: center; }
     .jumbotron .reachUs h2 {
-      text-align: center; }
-    .jumbotron .reachUs p {
-      background: #fff;
-      padding: 5px;
-      border-radius: 5px;
+      text-align: center;
+      font-size: 32px; }
+    .jumbotron .reachUs button {
+      font-size: 24px;
       font-weight: 500; }
   .jumbotron marquee {
     position: absolute;
-    bottom: 0;
+    bottom: 4%;
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     color: yellow;
@@ -26247,7 +26247,22 @@ img.profile {
     position: fixed;
     bottom: 5%;
     top: auto;
-    width: 100%; } }
+    width: 100%; }
+  .jumbotron .reachUs {
+    bottom: 15%;
+    left: 10.5%; } }
+
+@media only screen and (max-width: 768px) {
+  .jumbotron marquee {
+    width: 100%;
+    margin: 0;
+    bottom: 19%; }
+  .jumbotron .reachUs {
+    bottom: 25%;
+    margin: auto;
+    left: 30%;
+    right: auto;
+    top: auto; } }
 
 @media only screen and (min-width: 1200px) {
   marquee {
@@ -26840,8 +26855,10 @@ header,
   .modal.music-class-modal .modal-header p {
     margin: 15px 0; }
   .modal.music-class-modal .syllabus {
-    margin: 20px 4%;
-    border: 2px solid; }
+    margin: 20px;
+    border: 2px solid;
+    height: 250px;
+    width: 250px; }
   .modal.music-class-modal object.video {
     width: 100%;
     height: 480px;
@@ -29057,15 +29074,24 @@ body.lightOverlay md-backdrop.md-opaque {
     vertical-align: middle;
     margin-top: 0%; }
   .jumbotron img {
-    height: 1024px; } }
+    height: 1200px; } }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .jumbotron img {
-    height: 760px; }
+    height: 880px; }
+  .jumbotron {
+    position: relative;
+    height: 768px; }
+    .jumbotron marquee {
+      bottom: 6%; }
+    .jumbotron .reachUs {
+      top: 70%; }
   #aboutUs img.profile {
     height: 400px;
-    margin-top: 20%; } }
+    margin-top: 20%; }
+  #gallery {
+    padding-top: 12%; } }
 
 /* ----------- iPad Pro 10.5" ----------- */
 /* Portrait and Landscape */
@@ -29150,8 +29176,8 @@ p.title {
   margin-top: 15px; }
 
 .modal-dialog {
-  width: 70%;
-  margin: 5% auto; }
+  width: 95%;
+  margin: auto; }
 
 .modal-backdrop {
   background: #fff; }

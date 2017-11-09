@@ -1,10 +1,8 @@
 <div class="body-wrap">
   <div class="jumbotron" id="home">
     <div class="reachUs">
-      <h2>Reach Us</h2>
-      <p ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers">
-          <a href="tel:{{phone}}" title="{{phone}}"><i class="fa fa-phone-square" aria-hidden="true"></i>
-          &nbsp;&nbsp;{{phone}}&nbsp;</a></p>
+      <h2>Kuzhal Music School</h2>
+      <button to="#reachUs"type="button" class="btn btn-lg btn-primary btn-reachUs text-center">Reach Us</button>
     </div>
     <img src="images/backgrounds/kuzhal01-iso.jpg" alt="Slide background" class="kuzhal_bg img-responsive" />
     <marquee direction="left" speed="normal" behavior="loop" >
@@ -131,7 +129,7 @@
               <a href="tel:{{phone}}" title="{{phone}}"><i class="fa fa-phone-square" aria-hidden="true"></i>
               &nbsp;&nbsp;{{phone}}&nbsp;</a></p>
           </li>
-          <li>@ <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="{{vm.kuzhalConstants.kuzhalData.email}}">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
+          <li>Email: <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="{{vm.kuzhalConstants.kuzhalData.email}}">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
           <li></li>
       </ul >
     </div>
