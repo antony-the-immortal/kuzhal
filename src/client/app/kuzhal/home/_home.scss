@@ -80,14 +80,16 @@ div.slider figure {
 
 .jumbotron {
   position: relative;
+  background-size: 100% 123%;
+  background-repeat: no-repeat;
   img {
     height: 820px;
     width: 100%;
   }
   .reachUs {
     position: absolute;
-    top:55%;
-    right : 5%;
+    top:65%;
+    right : 6%;
     text-align: center;
     h2 {
       text-align: center;
@@ -100,14 +102,14 @@ div.slider figure {
   }
   marquee {
     position: absolute;
-    bottom: 4%;
-    background: rgba(0, 0, 0, 0.8);
+    bottom: 18.5%;
+    background: rgba(0, 0, 0, 0.0);
     padding: 10px;
     color: yellow;
     font-size: 16px;
     font-weight: 400;
-    width : 40%;
-    margin: 0 30%;
+    width: 30%;
+    margin: 0 1%;
 
 }
   

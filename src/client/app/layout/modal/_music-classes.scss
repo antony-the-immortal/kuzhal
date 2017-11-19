@@ -6,7 +6,7 @@
     .modal-content {
         background-image: url('../images/backgrounds/kuzhal_bg.jpg');
     }
-    .modal-header {
+    .modal-header,.modal-footer {
         background: rgba(0, 0, 0,  0.7);
     }
     .modal-header p {
@@ -14,10 +14,10 @@
     }
     
     .syllabus {
-        margin: 20px;
+        margin: 3%;
         border: 2px solid;
         height : 250px;
-        width : 250px;
+        width : 27%;
     }
     object.video {
         width : 100%;
@@ -48,5 +48,26 @@
             height: 250px;
         }
         
+    }
+}
+@media screen and (min-width : 768px) {
+    .modal.music-class-modal {
+    .modal-body {
+        height: 470px;
+        overflow: auto;
+    }
+}
+.instruments-modal {
+    .modal-dialog{
+        width : 70%;
+        top : 10%;
+    }
+}
+}
+@media screen and (min-width : 768px) and (orientation: portrait) {
+    .modal-dialog{
+        width : 70%;
+        top : 10%;
+        margin : auto !important;
     }
 }

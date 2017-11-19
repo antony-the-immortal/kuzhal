@@ -3,7 +3,7 @@
         <div class="">
                     <div class="col-md-12">
                     <div class="col-md-4 col-sm-6 col-xs-12 pull-left" id="contactUs">
-                        <h4>Contact us</h4>
+                        <h3>Contact us</h3>
                         <ul class="pull-left">
                             <li>
                                 <address>
@@ -12,18 +12,21 @@
                                         {{ vm.kuzhalConstants.kuzhalData.address.city +' '+  vm.kuzhalConstants.kuzhalData.address.state +' - ' + vm.kuzhalConstants.kuzhalData.address.pinCode}}
                                 </address> 
                             </li> 
-                            <li > 
-                                <span ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers"><a href="tel:{{phone}}" title="Call Us" > <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{phone}}</a></span>
+                            <li style="margin-left:-15px"> 
+                                <div class="col-md-6" ng-repeat="phone in vm.kuzhalConstants.kuzhalData.phoneNumbers">
+                                        <a href="tel:{{phone}}" title="Call Us" >
+                                                <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;{{phone}}</a>
+                                </div>
                             </li>
                             <li>Email: <a href="mailto:{{vm.kuzhalConstants.kuzhalData.email}}" title="Email Us">{{vm.kuzhalConstants.kuzhalData.email}} </a></li>
                             <li></li>
                         </ul >
                     </div>
-                    <div class="col-md-5 col-sm-6 col-xs-12  pull-left accredition">
-                            <h4>Accredition</h4>
+                    <div class="col-md-6 col-sm-6 col-xs-12  pull-left accredition">
+                            <h3>Accredition</h3>
                             <ul>
                                 <li ng-repeat="item in vm.kuzhalConstants.accredition">
-                                    <img alt="{{item.title}}" ng-src="{{item.imagePath}}"  width="70" height="65">
+                                    <img alt="{{item.title}}" ng-src="{{item.imagePath}}">
                                     <div> 
                                         <span>{{ item.title }} </span>
                                     <span>{{item.detail}}</span>
@@ -31,8 +34,8 @@
                                 </li>
                             </ul>
                     </div>
-                    <div class="col col-md-3 col-sm-12 col-xs-12  col-social-icons pull-right">
-                        <h4>Follow us</h4> 
+                    <div class="col col-md-2 col-sm-12 col-xs-12  col-social-icons pull-right">
+                        <h3>Follow us</h3> 
                         <a ng-href="{{vm.kuzhalConstants.social.facebook}}" target="_blank"><i class="fa fa-facebook facebook"></i></a> 
                         <!-- <a href="#"><i class="fa fa-google-plus google"></i></a>  -->
                         <a ng-href="{{vm.kuzhalConstants.social.youtube}}" target="_blank"><i class="fa fa-youtube youtube"></i></a> 
@@ -40,7 +43,8 @@
                     </div>
                         <!-- <a href="#"><img class="pull-right" src="images/logo1.png"></a> -->
                 </div>
-                <div class="col-md-12 copyright pull-right">2015 &copy; Kuzhal. All Rights Reserved.<a href="#">Terms and conditions</a></div>
+                <div class="col-md-12 copyright pull-right">
+                    2015 &copy; Kuzhal. All Rights Reserved. <a href="#">Terms and conditions</a></div>
         </div>
         <!-- <div class="container text-center visible-xs">
         <div class="row">

@@ -26,7 +26,7 @@
             "gallery": {
                 "mainHeading": "Gallery",
                 "tagLine": "A splash of our music school",
-                "descr": "<b>Kuzhal Isai Pattarai</b> provides a platform for the children and adults to achieve their music interests, making them learn different form of music through various music instruments.",
+                "descr": "<b>Kuzhal Isai Pattarai</b> provides a platform for the children and adults to achieve their music interests, making them learn different form of music through various music instruments."
             },
             "social": {
                 "mainHeading": "Social Media",
@@ -108,7 +108,7 @@
                     "id": "veena",
                     "name": "Veena",
                     "imagePath": "images/classes/veena.jpg",
-                    "desc": ["The learning levels in Veena instrumental music lessons offer a complete learning as a hobby with the instrumental music education curriculum and a complete well-defined Veena musical instrument studying syllabus for a promising career in music as Veena musical instrument performer or teaching Veena musical instrument. The famous, experienced, senior Indian Veena instrumental music teachers in sp sangeethalya - the Veena gurus teach us how to play Veena and technique of playing the traditional classical Indian instrumental music.",
+                    "desc": ["The learning levels in Veena instrumental music lessons offer a complete learning as a hobby with the instrumental music education curriculum and a complete well-defined Veena musical instrument studying syllabus for a promising career in music as Veena musical instrument performer or teaching Veena musical instrument. The famous, experienced, senior Indian Veena instrumental music teachers in Kuzhal IsaiPattarai - the Veena gurus teach us how to play Veena and technique of playing the traditional classical Indian instrumental music.",
                             "Our professional Veena instructors are experienced in guiding students who have no prior background knowledge. For those who have some Veena skills and experience, our instructors will help them achieve their potential in expressing themselves fully. To find out more, feel free to drop us an enquiry"],
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg1ccQpY16LZVFI_Mhagvhhb",
                     "syllabus": [{
@@ -221,7 +221,26 @@
                     "desc": [ "Flute, one of the most beautiful and enchanted sound created. With it’s mid to high pitch sound, it’s often relate to singing of the birds, painting a beautiful picture of an enchanted forest with trees, flowers, waterfalls and streams. Aside from the voice, flutes are the earliest known musical instruments. A number of flutes dating to about 35,000 to 40,000 years ago have been found in the Swabian Alb region of Germany. These flutes demonstrate that a developed musical tradition existed from the earliest period of modern human presence in Europe.",
                     "Our professional Flute instructors are experienced in guiding students with no prior background knowledge. For those who have some Flute skills and experience, our instructors will help them achieve their potential in expressing themselves fully."],
                     "tutorial" : "https://www.youtube.com/embed/videoseries?list=PLq2pC9LK8Wg2oXYyfITJMPam7UiDHAe97",
-                    "syllabus": null
+                    "syllabus": [{
+                        "grade": "Grade 1",
+                        "content": ["Sarali Varisaigal", "Jandai Varisaigal", "Melsthayi Varisai", "Keel swara Varisai", "Thattu Varisaigal - 2", "Alankarangal"]
+                    },
+                    {
+                        "grade": "Grade 2",
+                        "content": [ "Sanchari Geetham - 2", "Jathiswaram - 1", "Swarajati -1"]
+                    },
+                    {
+                        "grade": "Grade 3",
+                        "content": ["Sanchari Geetham - 2", "Jathiswaram - 1", "Athi thaala Varnam"]
+                    },
+                    {
+                        "grade": "Grade 4",
+                        "content": ["Athi thaala Varnam - 2", "Krithis - 4", "Thevaram - 1", "Keethanas - 4","Thirupugazh - 1"]
+                    },
+                    {
+                        "grade": "Grade 5",
+                        "content": ["Thana Varnam - 2", "Navaragamaliga Varnam -1","Keerthanas - 4", "Aazhvaar pasuram", "Patriotic Songs - 2"]
+                    }]
                 },
                 {
                     "id": "drums",

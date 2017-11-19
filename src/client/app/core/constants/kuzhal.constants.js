@@ -5,7 +5,7 @@
     .module('app.core')
     .constant("kuzhalConstants", {
         "kuzhalData" : {
-        	"phoneNumbers" : ["+91 98410 70001", "+91 98410 90001","+91 9841050002", "+91 98401 80001"],
+        	"phoneNumbers" : ["+91 98410 70001", "+91 98410 90001","+91 98410 50002", "+91 98401 80001"],
           "email"	: "mail@kuzhal.in",
           "address" : {
             "addressLine1" : "No 10/734, 3rd Main Road, VGP Babu Nagar",

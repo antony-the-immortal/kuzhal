@@ -7,6 +7,9 @@ body {
 .kuzhal_bg {
     background-image: url('../images/backgrounds/kuzhal_bg.jpg');
 }
+.kuzhal_brand_bg {
+    background-image: url('../images/backgrounds/kuzhal01-iso.jpg');
+}
 .jumptron > .kuzhal_bg {
     width : 100%;
     height: 600px;
@@ -35,6 +38,7 @@ form {
         margin-left: 35px;
     }
 }
+
 
 @media screen and (max-width : 768px){
     .modal {
@@ -72,3 +76,47 @@ form {
         bottom: 0;
     }
 }
+
+/*Animations*/
+.blink_me {
+    animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+  }
+  
+  @keyframes flash {  
+    from {color: yellow;}
+    to {color: white;}
+  }
+  .glow {
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+  }
+@-webkit-keyframes glowing {
+    0% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #5cb85c; }
+    50% { background-color: #4cae4c; -webkit-box-shadow: 0 0 3px #4cae4c; }
+    100% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #5cb85c; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #4cae4c; }
+    50% { background-color: #235123; -webkit-box-shadow: 0 0 3px #235123; }
+    100% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #4cae4c; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #5cb85c; }
+    50% { background-color: #235123; -webkit-box-shadow: 0 0 3px #235123; }
+    100% { background-color: #5cb85c; -webkit-box-shadow: 0 0 3px #5cb85c; }
+  }
