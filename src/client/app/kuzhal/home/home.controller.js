@@ -5,16 +5,21 @@
     .module('app.home')
     .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['logger','$scope','$sce', 'session','constants','dataservice', '$rootScope', 'modalService' ,'cookie', 'landingPageContent', 'kuzhalConstants' ,'Map'];
+    HomeController.$inject = ['logger','$scope','$sce','$firebaseObject', 'session','constants','dataservice', '$rootScope', 'modalService' ,'cookie'];
   /* @ngInject */
-  function HomeController(logger,$scope, $sce, session,constants,dataservice,$rootScope, modalService, cookie, landingPageContent, kuzhalConstants, Map) {
+  function HomeController(logger,$scope, $sce, $firebaseObject, session,constants, dataservice,$rootScope, modalService, cookie) {
     var vm = this;
     vm.title = 'Home';
 
     activate();
     function activate() {
-      vm.landingPageContent = landingPageContent;
-      vm.kuzhalConstants = kuzhalConstants;
+      //vm.landingPageContent = landingPageContent;
+      //vm.kuzhalConstants = kuzhalConstants;
+      var syncLandingPageObject = $firebaseObject(dataservice.landingPageData);
+      syncLandingPageObject.$bindTo(vm, "landingPageContent");
+      var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
+      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
+
       if(!cookie.getObject(constants.USER_DETAILS)){
        // modalService.showModal('app/layout/login-modals/prompt-login.html', 'prompt-login');
       }

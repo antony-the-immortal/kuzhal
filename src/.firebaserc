@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "kuzhal-9c1ad"
+    "default": "kuzhal-9c1ad",
+    "portfolio": "kuzhal-9c1ad"
   }
 }

@@ -1,0 +1,32 @@
+[debug] [2017-11-19T20:32:33.937Z] ----------------------------------------------------------------------
+[debug] [2017-11-19T20:32:33.942Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Anto\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-19T20:32:33.942Z] CLI Version:   3.13.1
+[debug] [2017-11-19T20:32:33.943Z] Platform:      win32
+[debug] [2017-11-19T20:32:33.943Z] Node Version:  v6.10.3
+[debug] [2017-11-19T20:32:33.943Z] Time:          Mon Nov 20 2017 02:02:33 GMT+0530 (India Standard Time)
+[debug] [2017-11-19T20:32:33.943Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-19T20:32:33.965Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-19T20:32:33.965Z] > authorizing via signed-in user
+[debug] [2017-11-19T20:32:33.969Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-19T20:32:33.970Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/oz58T7PygU79S7YvsUj8H2wPVYFfhKB3HhPZEXtkgJDsm2Oa9WWkNJSDiSORSDDC',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Nov 20 2017 02:02:33 GMT+0530 (India Standard Time)
+[debug] [2017-11-19T20:32:34.285Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-19T20:32:34.366Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/kuzhal-9c1ad  
+ Mon Nov 20 2017 02:02:34 GMT+0530 (India Standard Time)
+[debug] [2017-11-19T20:32:35.542Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-19T20:32:35.545Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/kuzhal-9c1ad/tokens  
+ Mon Nov 20 2017 02:02:35 GMT+0530 (India Standard Time)
+[debug] [2017-11-19T20:32:36.469Z] <<< HTTP RESPONSE 200
+[info] 1
+[info] 
+[info] === Deploying to 'kuzhal-9c1ad'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] [2017-11-19T20:32:41.946Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/kuzhal-9c1ad/uploads/-KzKywBplAGuDO4gWu4p?fileCount=45&message=  
+ Mon Nov 20 2017 02:02:41 GMT+0530 (India Standard Time)

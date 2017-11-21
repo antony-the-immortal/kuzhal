@@ -17,7 +17,7 @@
 
     if (!(window.history && window.history.pushState)) {
       /*Set your default landing page here*/
-      window.location.hash = '/login';
+      window.location.hash = '/home';
     }
 
     $locationProvider.html5Mode(true);

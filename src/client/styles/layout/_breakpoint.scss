@@ -28,9 +28,10 @@
                 height: auto;
         }
         .jumbotron {
-            background-size: 135% 120%;
-            BACKGROUND-REPEAT: NO-REPEAT;
+            background-size: 140% 110%;
+            background-repeat: NO-REPEAT;
             background-position: center 0px;
+            height : 670px;
             .kuzhal_bg{
                 height: 667px;
                 background-size: cover;
@@ -43,7 +44,7 @@
                 bottom : 4% !important;
             }
             .reachUs {
-                left: 20%;
+                left: 24%;
                 width: 200px;
                 top: 72%;
                 h2 {
@@ -91,7 +92,9 @@
     
     /* Upto Large devices */
     @media only screen and (min-width : 768px) {
-        
+        .jumbotron{ 
+            height: 700px;
+        }
     }
 
     /* Upto Large devices */

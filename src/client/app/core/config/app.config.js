@@ -31,5 +31,17 @@
     exceptionHandlerProvider.configure(config.appErrorPrefix);
     routerHelperProvider.configure({ docTitle: config.appTitle + ': ' });
   }
+  core.run(firebaseConfig);
+  function firebaseConfig() {
+    var config = {
+      apiKey: "AIzaSyBAnYVDul9wufxAw9VRpmO_wHqW3R9D2ho",
+      authDomain: "kuzhal-7e16a.firebaseapp.com",
+      databaseURL: "https://kuzhal-7e16a.firebaseio.com",
+      projectId: "kuzhal-7e16a",
+      storageBucket: "kuzhal-7e16a.appspot.com",
+      messagingSenderId: "309348069059"
+    };
+    firebase.initializeApp(config);
+  }
 
 })();

@@ -5,12 +5,11 @@
     .module('app.layout')
     .controller('ShellController', ShellController);
 
-  ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger','kuzhalConstants'];
+  ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger'];
   /* @ngInject */
-  function ShellController($rootScope, $timeout, config, logger, kuzhalConstants) {
+  function ShellController($rootScope, $timeout, config, logger) {
     var vm = this;
     vm.busyMessage = 'Please wait ...';
-    vm.kuzhalConstants = kuzhalConstants;
     vm.isBusy = true;
     $rootScope.showSplash = true;
     activate();

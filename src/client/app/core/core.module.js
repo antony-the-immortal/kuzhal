@@ -15,7 +15,8 @@
       'blocks.router',
       'ui.router',
       'ui.mask',
-      "ui.bootstrap"
+      "ui.bootstrap",
+      "firebase"
 
     ]);
 })();

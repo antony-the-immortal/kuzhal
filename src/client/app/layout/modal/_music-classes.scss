@@ -12,12 +12,9 @@
     .modal-header p {
         margin: 15px 0;
     }
-    
     .syllabus {
         margin: 3%;
         border: 2px solid;
-        height : 250px;
-        width : 27%;
     }
     object.video {
         width : 100%;
@@ -56,6 +53,10 @@
         height: 470px;
         overflow: auto;
     }
+    .syllabus {
+        height : 250px;
+        width : 27%;
+    } 
 }
 .instruments-modal {
     .modal-dialog{

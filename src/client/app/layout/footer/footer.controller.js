@@ -5,17 +5,17 @@
     .module('app.layout')
     .controller('FooterController', FooterController);
 
-    FooterController.$inject = ['logger','kuzhalConstants'];
+    FooterController.$inject = ['dataservice','$firebaseObject'];
   /* @ngInject */
-  function FooterController(logger, kuzhalConstants) {
+  function FooterController(dataservice, $firebaseObject) {
     var vm = this;
     vm.title = 'Footer';
 
     activate();
 
     function activate() {
-      logger.info('Activated Footer View');
-      vm.kuzhalConstants = kuzhalConstants;
+      var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
+      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
     }
   }
 })();
