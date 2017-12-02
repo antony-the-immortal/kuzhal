@@ -248,7 +248,14 @@
                 'maxlength': '12',
                 //'app-characters-allowed': '[0-9]',
                 //'app-account-number-validator': ''
-            }
+            },
+            'freeText': {
+                'type': 'text',
+                'required': '',
+                'autocapitalize': 'on',
+                'autocorrect': 'off',
+                'ng-model-options': '{ updateOn: blur }'
+            },
 
         });
 

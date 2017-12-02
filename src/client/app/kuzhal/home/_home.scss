@@ -100,6 +100,14 @@ div.slider figure {
       font-weight: 500;
     }
   }
+  .quiz-container {
+    position: absolute;
+    top: 66%;
+    left: 8%;
+    button {
+      margin:0 10px;
+    }
+  }
   marquee {
     position: absolute;
     bottom: 18.5%;
@@ -108,7 +116,7 @@ div.slider figure {
     color: yellow;
     font-size: 16px;
     font-weight: 400;
-    width: 30%;
+    width: 75%;
     margin: 0 1%;
 
 }
@@ -279,17 +287,22 @@ marquee {
 }
 }
 @media only screen and (max-width:768px) {
-  .jumbotron marquee {
+  .jumbotron {
+    marquee {
     width: 100%;
     margin: 0;
     bottom : 19%;
   }
-  .jumbotron .reachUs {
+  .reachUs {
     bottom: 25%;
     margin: auto;
     left: 30%;
     right: auto;
     top : auto;
+  }
+    .quiz-container{
+  left: 15%;
+  }
 }
 }
 @media only screen and (min-width : 1200px) {

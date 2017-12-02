@@ -14,7 +14,9 @@
                 landingPageData : rootRef.child('landingPageData'),
                 kuzhalInfo : rootRef.child('kuzhalInfo'),
             }
-
+            landingPageData.on("value", function(data) {
+               console.log(data);
+              });
             /*Consumer - Get all the products for each category*/
             function getProducts(categoryCode, productID) {
                 var url = constants.BASE_URL;

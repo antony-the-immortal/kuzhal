@@ -15,14 +15,19 @@
     function activate() {
       //vm.landingPageContent = landingPageContent;
       //vm.kuzhalConstants = kuzhalConstants;
-      var syncLandingPageObject = $firebaseObject(dataservice.landingPageData);
-      syncLandingPageObject.$bindTo(vm, "landingPageContent");
-      var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
-      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
 
+      var syncLandingPageObject = (cookie.getObject("KUZHAL_INFO")) ? cookie.getObject("KUZHAL_INFO") : $firebaseObject(dataservice.landingPageData);
+      syncLandingPageObject.$bindTo(vm, "landingPageContent");
+      var syncKuzhalInfoPageObject = (cookie.getObject("LANDING_INFO")) ? cookie.getObject("LANDING_INFO") :$firebaseObject(dataservice.kuzhalInfo);
+      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
+      cookie.setObject("KUZHAL_INFO", vm.kuzhalInfo);
+      cookie.setObject("LANDING_INFO", vm.landingPageData);
       if(!cookie.getObject(constants.USER_DETAILS)){
        // modalService.showModal('app/layout/login-modals/prompt-login.html', 'prompt-login');
       }
+    }
+    vm.showInstructions = function(data) {
+      modalService.showModal('app/layout/modal/quiz-modal.html', 'quiz-modal',data);
     }
     vm.onShowOurClassModal = function(classObj) {
       modalService.showModal('app/layout/modal/our-classes.modal.html', 'music-class-modal', classObj);

@@ -26114,6 +26114,12 @@ div.slider figure {
     .jumbotron .reachUs button {
       font-size: 24px;
       font-weight: 500; }
+  .jumbotron .quiz-container {
+    position: absolute;
+    top: 66%;
+    left: 8%; }
+    .jumbotron .quiz-container button {
+      margin: 0 10px; }
   .jumbotron marquee {
     position: absolute;
     bottom: 18.5%;
@@ -26122,7 +26128,7 @@ div.slider figure {
     color: yellow;
     font-size: 16px;
     font-weight: 400;
-    width: 30%;
+    width: 75%;
     margin: 0 1%; }
 
 img.profile {
@@ -26264,7 +26270,9 @@ img.profile {
     margin: auto;
     left: 30%;
     right: auto;
-    top: auto; } }
+    top: auto; }
+  .jumbotron .quiz-container {
+    left: 15%; } }
 
 @media only screen and (min-width: 1200px) {
   marquee {
@@ -26864,6 +26872,18 @@ header,
     height: 480px;
     margin-top: 30px; }
 
+.quiz-modal .modal-title {
+  text-align: center; }
+
+.quiz-modal .modal-content {
+  background-image: url("../images/backgrounds/kuzhal_bg.jpg"); }
+
+.quiz-modal .modal-header, .quiz-modal .modal-footer {
+  background: rgba(0, 0, 0, 0.7); }
+
+.quiz-modal .modal-header p {
+  margin: 15px 0; }
+
 .instruments-modal .modal-header {
   background: rgba(0, 0, 0, 0.7);
   text-align: center; }
@@ -26871,6 +26891,9 @@ header,
 .instruments-modal img {
   height: 400px;
   width: 300px; }
+
+.quiz-instructions ol {
+  list-style-type: decimal; }
 
 @media screen and (max-width: 768px) {
   .modal.music-class-modal {
@@ -26880,7 +26903,9 @@ header,
       padding: 0; }
     .modal.music-class-modal object.video {
       width: 100%;
-      height: 250px; } }
+      height: 250px; }
+  .modal.quiz-modal .modal-body {
+    height: 100vh; } }
 
 @media screen and (min-width: 768px) {
   .modal.music-class-modal .modal-body {

@@ -25,7 +25,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12  pull-left accredition">
                             <h3>Accredition</h3>
                             <ul>
-                                <li ng-repeat="item in vm.kuzhalConstants.accredition">
+                                <li ng-repeat="item in vm.kuzhalConstants.accredition" ng-if="item">
                                     <img alt="{{item.title}}" ng-src="{{item.imagePath}}">
                                     <div> 
                                         <span>{{ item.title }} </span>
@@ -43,8 +43,9 @@
                     </div>
                         <!-- <a href="#"><img class="pull-right" src="images/logo1.png"></a> -->
                 </div>
-                <div class="col-md-12 copyright pull-right">
-                    2015 &copy; Kuzhal. All Rights Reserved. <a href="#">Terms and conditions</a></div>
+                <div class="col-md-12 copyright pull-right" ng-click="vm.goToAdmin()">
+                    2015 &copy; Kuzhal. All Rights Reserved. <a href="#">Terms and conditions</a>
+                </div>
         </div>
         <!-- <div class="container text-center visible-xs">
         <div class="row">

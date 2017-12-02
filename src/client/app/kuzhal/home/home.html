@@ -1,5 +1,9 @@
 <div class="body-wrap">
   <div class="jumbotron kuzhal_brand_bg" id="home">
+    <div class="quiz-container">
+        <button type="button" class="btn btn-lg btn-success text-center " ng-click="vm.showInstructions(vm.landingPageContent.quiz)">Instructions</button>
+        <!-- <button  type="button" class="btn btn-lg btn-success text-center glow">Winner</button> -->
+     </div>
     <div class="reachUs">
       <h2>Kuzhal Music School</h2>
       <button to="#reachUs"type="button" class="btn btn-lg btn-primary btn-reachUs text-center">Reach Us</button>
@@ -107,11 +111,7 @@
   </div>
   <div id="reachUs" class="row section bg">
     <div class="col-md-8 col-sm-7 col-xs-12">
-      <!-- <div id="map"></div> -->
       <object data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62222.67874777182!2d80.15317013426069!3d12.91302885742931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c1dee36e907%3A0x87a1f231610aafd3!2sKuzhal+Isai+Pattarai!5e0!3m2!1sen!2sin!4v1485440393436"></object>
-      <!-- <object 
-      data="{{vm.landingPageContent.social.gmap.urlWithKey}}">
-      </object> -->
     </div>
     <div class="col-md-4 col-sm-5 col-xs-12">
       <h2 class="text-left">Reach Us </h2>

@@ -22,6 +22,21 @@
         margin-top : 30px;
     }
 }
+.quiz-modal{ 
+
+    .modal-title {
+        text-align: center;
+    }
+    .modal-content {
+        background-image: url('../images/backgrounds/kuzhal_bg.jpg');
+    }
+    .modal-header,.modal-footer {
+        background: rgba(0, 0, 0,  0.7);
+    }
+    .modal-header p {
+        margin: 15px 0;
+    }
+}
 .instruments-modal {
     .modal-header {
         background: rgba(0, 0, 0,  0.7);
@@ -32,6 +47,11 @@
             width : 300px;
         }
 } 
+.quiz-instructions {
+    ol {
+        list-style-type: decimal;
+    }
+}
 
 @media screen and (max-width : 768px){
     .modal.music-class-modal {
@@ -45,6 +65,11 @@
             height: 250px;
         }
         
+    }
+    .modal.quiz-modal {
+        .modal-body {
+            height: 100vh;
+        }
     }
 }
 @media screen and (min-width : 768px) {

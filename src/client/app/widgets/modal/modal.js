@@ -3,9 +3,9 @@ angular
 .module('app.widgets')
 .factory('modalService', modalService);
 
-modalService.$inject = ['$rootScope', '$uibModal', 'logger', 'session', 'dataservice','constants','$state'];
+modalService.$inject = ['$rootScope', '$uibModal','$firebaseObject', 'logger', 'session', 'dataservice','constants','$state'];
 /* @ngInject */
-function modalService($rootScope, $uibModal, logger, session, dataservice, constants,$state) {
+function modalService($rootScope, $uibModal, $firebaseObject,  logger, session, dataservice, constants,$state) {
 
 return {
     showModal: showModal
@@ -21,12 +21,26 @@ function showModal(templateUrl, templateName, data) {
         controller: function ($scope, $uibModalInstance, $log, user) {
             $scope.data = user;
             $scope.showTutorial = true;
+            var syncLandingPageObject =  $firebaseObject(dataservice.landingPageData);
+            syncLandingPageObject.$bindTo($scope, "landingPageContent");
+            var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
+            syncKuzhalInfoPageObject.$bindTo($scope, "kuzhalInfo");
+
             $scope.submit = function () {
                 $uibModalInstance.dismiss('cancel'); // dismiss(reason) - a method that can be used to dismiss a modal, passing a reason
             }
             $scope.close = function () {
                 $uibModalInstance.dismiss('cancel'); 
             };
+             $scope.validateAdmin = function () {
+                if($scope.secretCode.toLowerCase() === "admin") {
+                    $uibModalInstance.dismiss('cancel'); 
+                    showModal('app/layout/modal/edit-details.html', 'edit-modal', $scope)
+                }
+            } 
+            $scope.save = function() {
+                $scope.submitted = true;
+            }
         },
         resolve: {
             user: function () {

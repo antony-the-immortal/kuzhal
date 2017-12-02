@@ -25,6 +25,12 @@ console.log('NODE_ENV=' + environment);
 switch (environment) {
   case 'build': case 'prod':
     console.log('** BUILD **');
+    app.use(function(req, res, next) {
+      if(!req.secure) {
+        return res.redirect('https://' + req.headers.host + req.path);
+      }
+      next();
+    });
     app.use(express.static('./build/'));
     // Any invalid calls for templateUrls are under app/* and should return 404
     app.use('/app/*', function(req, res, next) {
