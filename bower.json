@@ -14,7 +14,8 @@
     "tests"
   ],
   "devDependencies": {
-    "angular-mocks": "~1.4.0"
+    "angular-mocks": "~1.4.0",
+    "ng-repeat-owl-carousel": "*"
   },
   "dependencies": {
     "jquery": "~2.1.4",
@@ -67,6 +68,11 @@
     "angular-aria": {
       "main": [
         "angular-aria.min.js"
+      ]
+    },
+    "ng-repeat-owl-carousel": {
+      "main": [
+        "dist/ngRepeatOwlCarousel.min.js"
       ]
     }
   }

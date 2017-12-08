@@ -1,3 +1,7 @@
+.error {
+    color: rgba(255, 0, 0, 0.836);
+    padding-left: 35px;
+}
 .modal.music-class-modal{
     padding: 50px;
     .modal-title {
@@ -35,6 +39,20 @@
     }
     .modal-header p {
         margin: 15px 0;
+    }
+    .modal-body {
+        min-height: 400px;
+        width : 100%;
+        object {
+            width : 100%;
+            height: 385px;
+        }
+    }
+}
+.edit-modal {
+    .modal-header{background: rgba(0, 0, 0,  0.7);}
+    .modal-body {
+        form { background: rgba(0, 0, 0,  0.7);}
     }
 }
 .instruments-modal {

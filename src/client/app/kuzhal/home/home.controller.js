@@ -13,18 +13,24 @@
 
     activate();
     function activate() {
-      //vm.landingPageContent = landingPageContent;
-      //vm.kuzhalConstants = kuzhalConstants;
-
-      var syncLandingPageObject = (cookie.getObject("KUZHAL_INFO")) ? cookie.getObject("KUZHAL_INFO") : $firebaseObject(dataservice.landingPageData);
-      syncLandingPageObject.$bindTo(vm, "landingPageContent");
-      var syncKuzhalInfoPageObject = (cookie.getObject("LANDING_INFO")) ? cookie.getObject("LANDING_INFO") :$firebaseObject(dataservice.kuzhalInfo);
-      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
-      cookie.setObject("KUZHAL_INFO", vm.kuzhalInfo);
-      cookie.setObject("LANDING_INFO", vm.landingPageData);
-      if(!cookie.getObject(constants.USER_DETAILS)){
-       // modalService.showModal('app/layout/login-modals/prompt-login.html', 'prompt-login');
-      }
+      //vm.landingPageContent = (cookie.getObject("LANDING_INFO")) ? cookie.getObject("LANDING_INFO") : dataservice.getLandingPageData();
+      //vm.kuzhalConstants = (cookie.getObject("KUZHAL_INFO")) ? cookie.getObject("KUZHAL_INFO") : dataservice.getKuzhalConstants();
+      $firebaseObject(dataservice.landingPageRef).$loaded().then(function(data) {
+        cookie.setObject("LANDING_INFO", data);
+        vm.landingPageContent = data;
+      });
+      $firebaseObject(dataservice.kuzhalInfoRef).$loaded().then(function(data) {
+        cookie.setObject("KUZHAL_INFO", data);
+        vm.kuzhalConstants = data;
+      });
+      vm.carouselInitializer = function() {
+        $("#owl-carousel").owlCarousel({
+          items: 10,
+          navigation: true,
+          pagination: false,
+          navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+        });
+      };
     }
     vm.showInstructions = function(data) {
       modalService.showModal('app/layout/modal/quiz-modal.html', 'quiz-modal',data);

@@ -16,7 +16,8 @@
       'ui.router',
       'ui.mask',
       "ui.bootstrap",
-      "firebase"
+      "firebase",
+      "ocNgRepeat"
 
     ]);
 })();

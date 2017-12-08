@@ -14,8 +14,7 @@
     activate();
 
     function activate() {
-      var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
-      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
+      vm.kuzhalConstants = (cookie.getObject("KUZHAL_INFO")) ? cookie.getObject("KUZHAL_INFO") : dataservice.getKuzhalConstants();
       vm.userName = cookie.getObject(constants.USER_DETAILS) || null ;
     }
     vm.enroll = function() {

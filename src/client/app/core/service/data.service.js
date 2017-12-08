@@ -1,52 +1,45 @@
-(function() {
-        'use strict';
+(function () {
+    'use strict';
 
-        angular
-            .module('app.core')
-            .factory('dataservice', dataservice);
+    angular
+        .module('app.core')
+        .factory('dataservice', dataservice);
 
-        dataservice.$inject = ['$http', '$q','$firebaseArray', 'exception', 'logger', 'constants'];
-        /* @ngInject */
-        function dataservice($http, $q, $firebaseArray, exception, logger, constants) {
-            
-            var rootRef = firebase.database().ref();
-            return {
-                landingPageData : rootRef.child('landingPageData'),
-                kuzhalInfo : rootRef.child('kuzhalInfo'),
-            }
-            landingPageData.on("value", function(data) {
-               console.log(data);
-              });
-            /*Consumer - Get all the products for each category*/
-            function getProducts(categoryCode, productID) {
-                var url = constants.BASE_URL;
-                switch (categoryCode) {
-                    case 'CP':
-                        url = url + 'getconsumerproducts';
-                        break
-                    case 'FS':
-                        url = url + 'farmsuppliments';
-                        break;
-                    case 'TE':
-                        url = url + 'farmsuppliments';
-                        break;
-                }
+    dataservice.$inject = ['$http', '$q', '$firebaseArray', 'exception', 'logger', 'constants','cookie'];
+    /* @ngInject */
+    function dataservice($http, $q, $firebaseArray, exception, logger, constants, cookie) {
+        var deferred = $q.defer();
+        var rootRef = firebase.database();
+        var landingPageRef = rootRef.ref('/landingPageData');
+        var kuzhalInfoRef = rootRef.ref('/kuzhalInfo');
 
-                return $http.get(url)
-                    .then(success)
-                    .catch(fail);
+        return {
+            landingPageRef : landingPageRef,
+            kuzhalInfoRef: kuzhalInfoRef,
+            getLandingPageData: getLandingPageData,
+            getKuzhalConstants: getKuzhalConstants,
+            updateData : updateData
+        }
+        function getLandingPageData() {
+            return landingPageRef.on("value", function (data) {
+                cookie.setObject("LANDING_INFO", data.val());
+                deferred.resolve(data.val());
+                return deferred.promise;
+            });
+        }
+        function getKuzhalConstants() {
+            return kuzhalInfoRef.on("value", function (data) {
+                cookie.setObject("KUZHAL_INFO", data.val());
+                deferred.resolve(data.val());
+                return deferred.promise;
+            });
+        }
 
-                function success(response) {
-                    return response.data.data;
-                }
-
-                function fail(error) {
-                    logger.error(error);
-                    return $q.reject(error);
-                }
-
-            };
-
+        function updateData(dataObj) {
+            landingPageRef.child("marquee").update(dataObj.marquee);
+            landingPageRef.child("guruSpeech").update(dataObj.guruSpeech);
+            landingPageRef.child("admin").update(dataObj.admin);
+        }
     }
 
 })();

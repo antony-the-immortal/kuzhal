@@ -1,12 +1,13 @@
 <md-content class="md-no-momentum">
     <form role="form" name="signUpForm" novalidate focus-error>
         <md-input-container class="md-icon-float md-block" 
-        app-text-input="firstName" icon="person"
+        app-text-input="firstName"
+        icon="person"
         input-model="secretCode" 
         placeholder-label="Enter the secret code">
         </md-input-container>
-     
-     <div>
+     <p class="error" ng-if="errorMsg">{{ errorMsg }}</p>
+     <div class="tesxt-center">
          <md-button class="md-raised md-primary md-block" ng-click="validateAdmin()" >Verify</md-button>
      </div>
      </form>

@@ -21,10 +21,12 @@ function showModal(templateUrl, templateName, data) {
         controller: function ($scope, $uibModalInstance, $log, user) {
             $scope.data = user;
             $scope.showTutorial = true;
-            var syncLandingPageObject =  $firebaseObject(dataservice.landingPageData);
-            syncLandingPageObject.$bindTo($scope, "landingPageContent");
-            var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
-            syncKuzhalInfoPageObject.$bindTo($scope, "kuzhalInfo");
+            $firebaseObject(dataservice.landingPageRef).$loaded().then(function(data) {
+                $scope.landingPageContent = data;
+              });
+              $firebaseObject(dataservice.kuzhalInfoRef).$loaded().then(function(data) {
+                $scope.kuzhalConstants = data;
+              });
 
             $scope.submit = function () {
                 $uibModalInstance.dismiss('cancel'); // dismiss(reason) - a method that can be used to dismiss a modal, passing a reason
@@ -33,13 +35,24 @@ function showModal(templateUrl, templateName, data) {
                 $uibModalInstance.dismiss('cancel'); 
             };
              $scope.validateAdmin = function () {
-                if($scope.secretCode.toLowerCase() === "admin") {
+                if($scope.secretCode.toLowerCase() === $scope.landingPageContent.admin["password"]) {
                     $uibModalInstance.dismiss('cancel'); 
                     showModal('app/layout/modal/edit-details.html', 'edit-modal', $scope)
+                } else {
+                    $scope.errorMsg ="Invalid password";
                 }
             } 
             $scope.save = function() {
                 $scope.submitted = true;
+                dataservice.updateData($scope.landingPageContent);
+            }
+
+            $scope.passwordChange = function(oldPassword, newPassword, confirmPassword) {
+                if(oldPassword === $scope.landingPageContent.admin["password"] && (newPassword === confirmPassword)){
+                    $scope.landingPageContent.admin.password = newPassword;
+                    dataservice.updateData($scope.landingPageContent);
+                    $scope.setPassword = false;
+                }
             }
         },
         resolve: {

@@ -1,17 +1,44 @@
 <div class="modal-header">
     <button type="button" class="close" ng-click="close()">&times;</button>
     <h2 class="modal-title">Edit Details</h2>
-    
+    <a href="#" class="pull-right" ng-click="setPassword = true;">Change Password</a>
   </div>
   <div class="modal-body kuzhal_bg" >
-     <form role="form" name="signUpForm" novalidate focus-error>
+     <form role="form" name="signUpForm" novalidate focus-error ng-if="!setPassword">
+        <md-input-container class="md-block">
+            <label>Marquee TitleL</label>
+            <input type="text" ng-model="landingPageContent.marquee.title">
+        </md-input-container>
         <md-input-container class="md-block">
             <label>Marquee Text</label>
             <textarea rows="5" ng-model="landingPageContent.marquee.info" ></textarea>
         </md-input-container>
-     <div>
-         <md-button class="md-raised md-primary md-block" ng-click="save()" ng-class="{'md-success' : submitted }" >Save</md-button>
+        <md-input-container class="md-block">
+            <label>Guru Speech URL</label>
+            <input type="text" ng-model="landingPageContent.guruSpeech.url">
+        </md-input-container>
+        
+     <div class="text-center">
+         <md-button class="md-raised md-primary md-block" ng-click="save()" ng-class="{'md-success' : submitted }" ng-bind="(submitted) ? 'Saved Details': 'Save'">Save</md-button>
      </div>
+     </form>
+     <form role="form" name="passwordForm" novalidate focus-error ng-if="setPassword">
+            <md-input-container class="md-block">
+                    <label>Old Password</label>
+                    <input  type="password" ng-model="oldPassword">
+            </md-input-container>
+            <md-input-container class="md-block">
+                    <label>Change Admin Password</label>
+                    <input  type="password" ng-model="newPassword">
+            </md-input-container>
+            <md-input-container class="md-block">
+                    <label>Confirm Admin Password</label>
+                    <input type="password" ng-model="confirmPassword">
+            </md-input-container>
+            <div class="text-center">
+                    <p class="error" ng-if="errorMessage"> {{ errorMessage }} </p>
+                    <md-button class="md-raised md-primary md-block" ng-click="passwordChange(oldPassword, newPassword, confirmPassword )" ng-class="{'md-success' : submitted }" ng-bind="(submitted) ? 'Password Changed': 'Reset Password'">Save</md-button>
+                </div>
      </form>
       </div>
       

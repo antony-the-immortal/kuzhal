@@ -26116,10 +26116,48 @@ div.slider figure {
       font-weight: 500; }
   .jumbotron .quiz-container {
     position: absolute;
-    top: 66%;
-    left: 8%; }
+    top: 68%;
+    left: 7%; }
     .jumbotron .quiz-container button {
-      margin: 0 10px; }
+      margin: 0 10px;
+      padding: 3px 5px;
+      height: 25px; }
+      .jumbotron .quiz-container button div {
+        position: absolute;
+        top: -150px;
+        left: -100px;
+        -webkit-transition: all 1000ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 1000ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 1000ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 1000ms ease-in;
+        transform: scale(0);
+        background: rgba(255, 255, 255, 0.7);
+        min-height: 200px;
+        min-width: 200px;
+        color: #333;
+        padding: 15% 15%; }
+      .jumbotron .quiz-container button p {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center; }
+      .jumbotron .quiz-container button img {
+        max-width: 300px;
+        height: 200px; }
+    .jumbotron .quiz-container button.glow:hover div {
+      width: auto;
+      top: -340px;
+      left: 10px;
+      transform: scale(1);
+      -webkit-transition: all 1000ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 1000ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 1000ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 1000ms ease-in; }
   .jumbotron marquee {
     position: absolute;
     bottom: 18.5%;
@@ -26854,6 +26892,10 @@ header,
 .navbar-default .navbar-nav > .active > a:focus {
   color: yellow; }
 
+.error {
+  color: rgba(255, 0, 0, 0.836);
+  padding-left: 35px; }
+
 .modal.music-class-modal {
   padding: 50px; }
   .modal.music-class-modal .modal-title {
@@ -26883,6 +26925,19 @@ header,
 
 .quiz-modal .modal-header p {
   margin: 15px 0; }
+
+.quiz-modal .modal-body {
+  min-height: 400px;
+  width: 100%; }
+  .quiz-modal .modal-body object {
+    width: 100%;
+    height: 385px; }
+
+.edit-modal .modal-header {
+  background: rgba(0, 0, 0, 0.7); }
+
+.edit-modal .modal-body form {
+  background: rgba(0, 0, 0, 0.7); }
 
 .instruments-modal .modal-header {
   background: rgba(0, 0, 0, 0.7);
@@ -29255,7 +29310,7 @@ body {
   background-image: url("../images/backgrounds/kuzhal_bg.jpg"); }
 
 .kuzhal_brand_bg {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/kuzhal-7e16a.appspot.com/o/kuzhal01-iso.jpg?alt=media&token=5e298e9d-9147-4102-ad3b-61ab0671c258"); }
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/kuzhal-7e16a.appspot.com/o/kuzhal01-iso.jpg?alt=media&token=873cd796-06eb-4570-a06f-aa0b80514cef"); }
 
 .jumptron > .kuzhal_bg {
   width: 100%;

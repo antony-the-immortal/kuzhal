@@ -5,17 +5,20 @@
     .module('app.layout')
     .controller('FooterController', FooterController);
 
-    FooterController.$inject = ['dataservice','$firebaseObject', 'modalService'];
+    FooterController.$inject = ['dataservice','$firebaseObject', 'modalService','cookie'];
   /* @ngInject */
-  function FooterController(dataservice, $firebaseObject, modalService) {
+  function FooterController(dataservice, $firebaseObject, modalService, cookie) {
     var vm = this;
     vm.title = 'Footer';
 
     activate();
 
     function activate() {
-      var syncKuzhalInfoPageObject = $firebaseObject(dataservice.kuzhalInfo);
-      syncKuzhalInfoPageObject.$bindTo(vm, "kuzhalConstants");
+      $firebaseObject(dataservice.kuzhalInfoRef).$loaded().then(function(data) {
+        cookie.setObject("KUZHAL_INFO", data);
+        vm.kuzhalConstants = data;
+      });
+     // vm.kuzhalConstants = (cookie.getObject("KUZHAL_INFO")) ? cookie.getObject("KUZHAL_INFO") : dataservice.getKuzhalConstants();
     }
 
     vm.goToAdmin = function() {

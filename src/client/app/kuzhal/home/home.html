@@ -1,9 +1,18 @@
 <div class="body-wrap">
   <div class="jumbotron kuzhal_brand_bg" id="home">
-    <div class="quiz-container">
-        <button type="button" class="btn btn-lg btn-success text-center " ng-click="vm.showInstructions(vm.landingPageContent.quiz)">Instructions</button>
-        <!-- <button  type="button" class="btn btn-lg btn-success text-center glow">Winner</button> -->
-     </div>
+     <div class="quiz-container">
+        <button type="button" class="btn btn-primary text-center " ng-click="vm.showInstructions(vm.landingPageContent.quiz)" ng-if="vm.landingPageContent.guruSpeech.url">Guru's Speech</button>
+        <button  type="button" class="btn btn-primary text-center glow">
+         Quiz Winner
+         <div class="winner">
+             <p ng-if="vm.landingPageContent.quiz.winnerDetails.name">Congratulations!!</p>
+             <p ng-if="!vm.landingPageContent.quiz.winnerDetails.name">Coming Soon!!</p>
+             <img src="/images/PP.jpg" class="img-thumbnail" ng-if="vm.landingPageContent.quiz.winnerDetails.name"/>
+             <p>{{ vm.landingPageContent.quiz.winnerDetails.name + '('+vm.landingPageContent.quiz.winnerDetails.regNo + ')'}}</p>
+             <p>{{ vm.landingPageContent.quiz.winnerDetails.phoneNumber }}</p>
+         </div> 
+        </button>
+    </div>
     <div class="reachUs">
       <h2>Kuzhal Music School</h2>
       <button to="#reachUs"type="button" class="btn btn-lg btn-primary btn-reachUs text-center">Reach Us</button>
@@ -45,36 +54,32 @@
           <h2 class="main-head center">{{vm.landingPageContent.gallery.mainHeading}}</h2>
           <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.gallery.tagLine"></h3>
       <owl-carousel-wrapper class="owl-carousel owl-theme">
-          <!-- <div class="item"><div class="textoverlay"><h3>The worlds online market place lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h3><a href="/products"><md-button class="shop-now-btn">Shop Now</md-button></a></div><img src="images/slider/slider-1.jpg" alt="Slide background" /> <div class="textoverlay"><h3>The worlds online market place lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h3><a href="/products"><md-button class="shop-now-btn">Shop Now</md-button></a></div></div> -->
-          <div class="item" ng-repeat="i in [] | limitTo :10">
-            <img ng-src="images/slider/{{ i + 1}}.jpg" alt="Slide background" />
+          <div class="item">
+            <img src="{{vm.landingPageContent.sliders[0]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/2.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[1]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/3.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[2]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/4.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[3]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/5.jpg" alt="Slide background" />
+            <img src="{{vm.landingPageContent.sliders[4]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/6.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[5]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/7.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[6]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/8.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[7]}}" alt="Slide background" />
           </div>
           <div class="item">
-            <img src="images/slider/9.jpg" alt="Slide background" />
-          </div>
-          <div class="item">
-            <img src="images/slider/10.jpg" alt="Slide background" />
+            <img ng-src="{{vm.landingPageContent.sliders[8]}}" alt="Slide background" />
           </div>
         </owl-carousel-wrapper>
  
@@ -109,6 +114,12 @@
         <div class="fb-follow" data-href="https://www.facebook.com/kuzhal.isaipattarai" data-layout="standard" data-size="large" data-show-faces="true"></div>
       </div>
   </div>
+  <!-- <div id="charity" class="row section">
+      <h2 class="main-head center">{{vm.landingPageContent.social.mainHeading}}</h2>
+      <h3 class="tag-head center" ng-bind-html="vm.landingPageContent.social.tagLine"></h3>
+      <div class="col-md-8 col-xs-12">
+      </div>
+  </div> -->
   <div id="reachUs" class="row section bg">
     <div class="col-md-8 col-sm-7 col-xs-12">
       <object data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62222.67874777182!2d80.15317013426069!3d12.91302885742931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c1dee36e907%3A0x87a1f231610aafd3!2sKuzhal+Isai+Pattarai!5e0!3m2!1sen!2sin!4v1485440393436"></object>
