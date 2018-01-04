@@ -21,25 +21,30 @@ function showModal(templateUrl, templateName, data) {
         controller: function ($scope, $uibModalInstance, $log, user) {
             $scope.data = user;
             $scope.showTutorial = true;
+            
             $firebaseObject(dataservice.landingPageRef).$loaded().then(function(data) {
                 $scope.landingPageContent = data;
               });
               $firebaseObject(dataservice.kuzhalInfoRef).$loaded().then(function(data) {
                 $scope.kuzhalConstants = data;
               });
-
+            $scope.oldPassword = null;
+            $scope.newPassword = null;
+            $scope.confirmPassword = null;
             $scope.submit = function () {
                 $uibModalInstance.dismiss('cancel'); // dismiss(reason) - a method that can be used to dismiss a modal, passing a reason
             }
             $scope.close = function () {
                 $uibModalInstance.dismiss('cancel'); 
             };
-             $scope.validateAdmin = function () {
-                if($scope.secretCode.toLowerCase() === $scope.landingPageContent.admin["password"]) {
+             $scope.validateAdmin = function (form) {
+                if($scope.username.toLowerCase() === $scope.landingPageContent.admin["password"]) {
                     $uibModalInstance.dismiss('cancel'); 
                     showModal('app/layout/modal/edit-details.html', 'edit-modal', $scope)
                 } else {
-                    $scope.errorMsg ="Invalid password";
+                    //$scope.errorMsg ="Invalid password";
+                    form.$setValidity('notValid', true);
+                    form.username.$setValidity('notValid', true);
                 }
             } 
             $scope.save = function() {
@@ -47,12 +52,19 @@ function showModal(templateUrl, templateName, data) {
                 dataservice.updateData($scope.landingPageContent);
             }
 
-            $scope.passwordChange = function(oldPassword, newPassword, confirmPassword) {
-                if(oldPassword === $scope.landingPageContent.admin["password"] && (newPassword === confirmPassword)){
-                    $scope.landingPageContent.admin.password = newPassword;
+            $scope.passwordChange = function(form) {
+                if($scope.oldPassword === $scope.landingPageContent.admin["password"] && ($scope.newPassword === $scope.confirmPassword)){
+                    $scope.landingPageContent.admin.password = $scope.newPassword;
                     dataservice.updateData($scope.landingPageContent);
                     $scope.setPassword = false;
                 }
+            }
+            
+            $scope.uploadImage = function(){
+                var file = angular.element("#uploadFile")[0];
+                dataservice.uploadImage(file.files[0]).then(function(response){
+                    $scope.landingPageContent.quiz.winnerDetails.imgURL = response;
+                });
             }
         },
         resolve: {

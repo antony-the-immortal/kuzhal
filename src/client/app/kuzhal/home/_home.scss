@@ -82,6 +82,7 @@ div.slider figure {
   position: relative;
   background-size: 100% 123%;
   background-repeat: no-repeat;
+  height: 100vh !important;
   img {
     height: 820px;
     width: 100%;
@@ -110,21 +111,21 @@ div.slider figure {
       height: 25px;
       div {
         position: absolute;
-        top: -150px;
-        left: -100px;
-        -webkit-transition: all 1000ms ease-in;
+        top: -200px;
+        left: 0;
+        -webkit-transition: all 600ms ease-in;
         -webkit-transform: scale(1); 
-        -ms-transition: all 1000ms ease-in;
+        -ms-transition: all 600ms ease-in;
         -ms-transform: scale(1); 
-        -moz-transition: all 1000ms ease-in;
+        -moz-transition: all 600ms ease-in;
         -moz-transform: scale(1);
-        transition: all 1000ms ease-in;
+        transition: all 600ms ease-in;
         transform: scale(0); 
         background: rgba(255, 255, 255, 0.7);
         min-height: 200px;
         min-width: 200px;
         color: #333;
-        padding: 15% 15%;
+        padding: 5%;
       }
       p {
         font-size: 16px;
@@ -132,39 +133,56 @@ div.slider figure {
         text-align: center;
       }
       img {
-        max-width : 300px;
-        height: 200px;
+        max-width : 400px;
+        height: 300px;
         
       }
     }
     
     button.glow:hover div {
-      width: auto;
-      top: -340px;
-      left: 10px;
+      width: 500px;
+      top: -360px;
+      left: 230px;
+      /* z-index: 100000; */
+      z-index: 2 !important;
       transform: scale(1); 
-      -webkit-transition: all 1000ms ease-in;
+      -webkit-transition: all 600ms ease-in;
       -webkit-transform: scale(1); 
-      -ms-transition: all 1000ms ease-in;
+      -ms-transition: all 600ms ease-in;
       -ms-transform: scale(1); 
-      -moz-transition: all 1000ms ease-in;
+      -moz-transition: all 600ms ease-in;
       -moz-transform: scale(1);
-      transition: all 1000ms ease-in;
+      transition: all 600ms ease-in;
       
       
     }
   }
-  marquee {
+  .marquee1 {
     position: absolute;
-    bottom: 18.5%;
+    top: 51vh;
+    right:0;
     background: rgba(0, 0, 0, 0.0);
     padding: 10px;
     color: yellow;
     font-size: 16px;
     font-weight: 400;
-    width: 75%;
+    width: 30vw;
+    margin: 0 1%;
+  }
+  .marquee-container {
+    position: absolute;
+    bottom: -1vh;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 10px;
+    color: yellow;
+    font-size: 16px;
+    font-weight: 400;
+    width: 76%;
     margin: 0 1%;
 
+    marquee:last-child{
+      margin-top:10%;
+    }
 }
   
 }
@@ -320,39 +338,38 @@ padding : 20px;
 height : 180px;
 }
 
-marquee {
+.marquee-container {
   position: fixed;
-  bottom : 5%;
   top : auto;
   width : 100%;
 }
 .jumbotron .reachUs {
-  
     bottom: 15%;
     left: 10.5%;
+    top: 65vh;
 }
 }
 @media only screen and (max-width:768px) {
   .jumbotron {
-    marquee {
-    width: 100%;
-    margin: 0;
-    bottom : 19%;
-  }
+    .marquee-container {
+      width: 100%;
+      margin: 0;
+    }
   .reachUs {
     bottom: 25%;
     margin: auto;
     left: 30%;
     right: auto;
-    top : auto;
+    top : 72vh;
   }
     .quiz-container{
-  left: 15%;
+      left: 25vh;
+      top:85vh;
   }
 }
 }
 @media only screen and (min-width : 1200px) {
-  marquee {
+  .marquee-container {
     width : 40%;
     margin : 0 30%;
   }

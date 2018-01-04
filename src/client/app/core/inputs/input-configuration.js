@@ -36,6 +36,17 @@
                 'autocapitalize': 'on',
                 'autocorrect': 'off'
             },
+            'username': {
+                'type': 'password',
+                'required': '',
+                'ng-pattern': '/^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/',
+                //'app-capitalize-first-letter': '',
+                //'app-capitalize-letter-after-hyphen': '',
+                'maxlength': '15',
+                'autocapitalize': 'off',
+                'autocomplete':'off',
+                'autocorrect': 'off'
+            },
             'cardName': {
                 'type': 'text',
                 'required': '',

@@ -6,6 +6,10 @@
             'placeholderLabel': 'First Name',
             'placeholderLabelActive': 'First Name'
         },
+        'username': {
+            'placeholderLabel': 'User Name',
+            'placeholderLabelActive': 'User Name'
+        },
         'amount':{
             'placeholderLabel': 'Total Transfer Amount (optional)',
             'placeholderLabelActive': 'Total Transfer Amount (optional)'

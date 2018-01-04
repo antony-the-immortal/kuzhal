@@ -25,21 +25,25 @@ jQuery(function ($) {
      * This part causes smooth scrolling using scrollto.js
      * We target all a tags inside the nav, and apply the scrollto.js to it.
      */
-    $(document).on("click","body",function (event) {
+    
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-110980706-1');
+     $(document).on("click","body",function (event) {
         var clickover = $(event.target);
-        
     });
 
-    $(document).on("click", "nav .navbar-right a, .btn.btn-reachUs", function (e) {
+    $(document).on("click", "nav .navbar-right a[to], .btn.btn-reachUs", function (e) {
+        var $el = $(this)
+        , id = $el.attr('to');
+        $('nav .navbar-right li').removeClass('active');
+        $el.parent('li').addClass('active');
         if(!$(this).hasClass('no-click-nav')) {
             e.preventDefault();
-            var $el = $(this)
-                , id = $el.attr('to');
-            $('nav .navbar-right li').removeClass('active');
-            $el.parent('li').addClass('active');
             $('html, body').animate({
                 scrollTop: $(id).offset().top - 50
-            }, 1000);
+            }, 1500);
             var _opened = $("#navbar").hasClass("navbar-collapse in");
             if (_opened === true && !clickover.hasClass("navbar-toggle")) {
                 $("button.navbar-toggle").click();

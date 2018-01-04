@@ -33,7 +33,7 @@
       };
     }
     vm.showInstructions = function(data) {
-      modalService.showModal('app/layout/modal/quiz-modal.html', 'quiz-modal',data);
+      modalService.showModal('app/layout/modal/quiz-modal.html', 'quiz-modal', vm.landingPageContent);
     }
     vm.onShowOurClassModal = function(classObj) {
       modalService.showModal('app/layout/modal/our-classes.modal.html', 'music-class-modal', classObj);

@@ -29,6 +29,12 @@
             { type: 'pattern', message: 'Please use letters only.' },
             { type: 'maxlength', message: 'Last Name should not exceed 20 characters.' }
         ],
+        'username' : [
+            { type: 'required', message: 'Please enter your last name.' },
+            { type: 'pattern', message: 'Please use letters only.' },
+            { type: 'maxlength', message: 'User Name should not exceed 20 characters.' },
+            { type: 'notValid', message: 'User name does not match with our records.'}
+        ],
         'streetAddress': [
             { type: 'required', message: 'Please enter your street address.' },
             { type: 'appValidStreetAddress', message: 'Please enter a valid street address.' },

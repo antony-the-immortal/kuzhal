@@ -38,18 +38,26 @@
                 width: 100%;
                 background-position: -220px 0;
             }
-            marquee {
+            .marquee1 {
+                top: 0;
+                width: 100%;
+            }
+            .marquee-container {
                 width : 100% !important;
                 margin : 0 !important;
-                bottom : 4% !important;
             }
             .reachUs {
                 left: 24%;
                 width: 200px;
-                top: 72%;
+                top: 65vh;
                 h2 {
                     font-size: 20px;
                 }
+            }
+            .quiz-container {
+                left: 12vh;
+                top: 82vh;
+                width: 100vw;
             }
         }
         footer {
@@ -77,7 +85,7 @@
                 width: 100%;
                 background-position: -220px 0;
             }
-            marquee {
+            .marquee-container {
                 width : 100% !important;
                 margin : 0 !important;
                 bottom : 1% !important;
@@ -139,9 +147,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
         width: 300px;
         left : 31%;
        }
-        marquee {
-            bottom : 4%;
-        }
     }
     
 }
@@ -162,7 +167,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
             bottom : 15%;
         }
         .reachUs {
-            top : 70%;
+            top: 71vh;
             width : 200px;
         }
     }

@@ -26099,7 +26099,8 @@ div.slider figure {
 .jumbotron {
   position: relative;
   background-size: 100% 123%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100vh !important; }
   .jumbotron img {
     height: 820px;
     width: 100%; }
@@ -26124,50 +26125,65 @@ div.slider figure {
       height: 25px; }
       .jumbotron .quiz-container button div {
         position: absolute;
-        top: -150px;
-        left: -100px;
-        -webkit-transition: all 1000ms ease-in;
+        top: -200px;
+        left: 0;
+        -webkit-transition: all 600ms ease-in;
         -webkit-transform: scale(1);
-        -ms-transition: all 1000ms ease-in;
+        -ms-transition: all 600ms ease-in;
         -ms-transform: scale(1);
-        -moz-transition: all 1000ms ease-in;
+        -moz-transition: all 600ms ease-in;
         -moz-transform: scale(1);
-        transition: all 1000ms ease-in;
+        transition: all 600ms ease-in;
         transform: scale(0);
         background: rgba(255, 255, 255, 0.7);
         min-height: 200px;
         min-width: 200px;
         color: #333;
-        padding: 15% 15%; }
+        padding: 5%; }
       .jumbotron .quiz-container button p {
         font-size: 16px;
         font-weight: bold;
         text-align: center; }
       .jumbotron .quiz-container button img {
-        max-width: 300px;
-        height: 200px; }
+        max-width: 400px;
+        height: 300px; }
     .jumbotron .quiz-container button.glow:hover div {
-      width: auto;
-      top: -340px;
-      left: 10px;
+      width: 500px;
+      top: -360px;
+      left: 230px;
+      /* z-index: 100000; */
+      z-index: 2 !important;
       transform: scale(1);
-      -webkit-transition: all 1000ms ease-in;
+      -webkit-transition: all 600ms ease-in;
       -webkit-transform: scale(1);
-      -ms-transition: all 1000ms ease-in;
+      -ms-transition: all 600ms ease-in;
       -ms-transform: scale(1);
-      -moz-transition: all 1000ms ease-in;
+      -moz-transition: all 600ms ease-in;
       -moz-transform: scale(1);
-      transition: all 1000ms ease-in; }
-  .jumbotron marquee {
+      transition: all 600ms ease-in; }
+  .jumbotron .marquee1 {
     position: absolute;
-    bottom: 18.5%;
+    top: 51vh;
+    right: 0;
     background: transparent;
     padding: 10px;
     color: yellow;
     font-size: 16px;
     font-weight: 400;
-    width: 75%;
+    width: 30vw;
     margin: 0 1%; }
+  .jumbotron .marquee-container {
+    position: absolute;
+    bottom: -1vh;
+    background: transparent;
+    padding: 10px;
+    color: yellow;
+    font-size: 16px;
+    font-weight: 400;
+    width: 76%;
+    margin: 0 1%; }
+    .jumbotron .marquee-container marquee:last-child {
+      margin-top: 10%; }
 
 img.profile {
   height: 500px;
@@ -26289,31 +26305,31 @@ img.profile {
     padding: 20px; }
   .owl-carousel .item img {
     height: 180px; }
-  marquee {
+  .marquee-container {
     position: fixed;
-    bottom: 5%;
     top: auto;
     width: 100%; }
   .jumbotron .reachUs {
     bottom: 15%;
-    left: 10.5%; } }
+    left: 10.5%;
+    top: 65vh; } }
 
 @media only screen and (max-width: 768px) {
-  .jumbotron marquee {
+  .jumbotron .marquee-container {
     width: 100%;
-    margin: 0;
-    bottom: 19%; }
+    margin: 0; }
   .jumbotron .reachUs {
     bottom: 25%;
     margin: auto;
     left: 30%;
     right: auto;
-    top: auto; }
+    top: 72vh; }
   .jumbotron .quiz-container {
-    left: 15%; } }
+    left: 25vh;
+    top: 85vh; } }
 
 @media only screen and (min-width: 1200px) {
-  marquee {
+  .marquee-container {
     width: 40%;
     margin: 0 30%; }
   #aboutUs {
@@ -26933,11 +26949,19 @@ header,
     width: 100%;
     height: 385px; }
 
-.edit-modal .modal-header {
+.edit-modal .modal-header, .edit-modal .modal-body, .edit-modal .modal-footer {
   background: rgba(0, 0, 0, 0.7); }
 
-.edit-modal .modal-body form {
-  background: rgba(0, 0, 0, 0.7); }
+.edit-modal .modal-body {
+  max-height: 480px;
+  overflow: auto;
+  padding: 15px; }
+
+.edit-modal .winnerDetails input {
+  display: inline-block; }
+
+.edit-modal .winnerDetails img {
+  max-width: 100px; }
 
 .instruments-modal .modal-header {
   background: rgba(0, 0, 0, 0.7);
@@ -29157,16 +29181,22 @@ body.lightOverlay md-backdrop.md-opaque {
       background-size: cover;
       width: 100%;
       background-position: -220px 0; }
-    .jumbotron marquee {
+    .jumbotron .marquee1 {
+      top: 0;
+      width: 100%; }
+    .jumbotron .marquee-container {
       width: 100% !important;
-      margin: 0 !important;
-      bottom: 4% !important; }
+      margin: 0 !important; }
     .jumbotron .reachUs {
       left: 24%;
       width: 200px;
-      top: 72%; }
+      top: 65vh; }
       .jumbotron .reachUs h2 {
         font-size: 20px; }
+    .jumbotron .quiz-container {
+      left: 12vh;
+      top: 82vh;
+      width: 100vw; }
   footer .accredition ul div span {
     font-size: 14px; }
   footer .accredition img {
@@ -29183,7 +29213,7 @@ body.lightOverlay md-backdrop.md-opaque {
       background-size: cover;
       width: 100%;
       background-position: -220px 0; }
-    .jumbotron marquee {
+    .jumbotron .marquee-container {
       width: 100% !important;
       margin: 0 !important;
       bottom: 1% !important; } }
@@ -29214,9 +29244,7 @@ body.lightOverlay md-backdrop.md-opaque {
     height: 720px; }
   .jumbotron .reachUs {
     width: 300px;
-    left: 31%; }
-  .jumbotron marquee {
-    bottom: 4%; } }
+    left: 31%; } }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -29228,7 +29256,7 @@ body.lightOverlay md-backdrop.md-opaque {
     .jumbotron marquee {
       bottom: 15%; }
     .jumbotron .reachUs {
-      top: 70%;
+      top: 71vh;
       width: 200px; }
   #aboutUs img.profile {
     height: 400px;
@@ -29354,11 +29382,6 @@ form .errorMessage {
   .enrollment-form md-input-container.footer {
     position: fixed;
     width: 95%;
-    bottom: 0; } }
-
-@media screen and (max-width: 1024px) {
-  marquee {
-    position: absolute;
     bottom: 0; } }
 
 /*Animations*/

@@ -1,15 +1,18 @@
 <div class="body-wrap">
   <div class="jumbotron kuzhal_brand_bg" id="home">
-     <div class="quiz-container">
-        <button type="button" class="btn btn-primary text-center " ng-click="vm.showInstructions(vm.landingPageContent.quiz)" ng-if="vm.landingPageContent.guruSpeech.url">Guru's Speech</button>
+    <marquee direction="left" speed="normal" behavior="loop" class="marquee1">
+      <strong>{{vm.landingPageContent.marquee[0].title}}</strong>&nbsp;{{vm.landingPageContent.marquee[0].info}}
+    </marquee> 
+    <div class="quiz-container" ng-show="vm.landingPageContent.guruSpeech.url || vm.landingPageContent.quiz.winnerDetails.name">
+        <button type="button" class="btn btn-primary text-center " ng-click="vm.showInstructions(vm.landingPageContent.quiz)">Guru's Speech</button>
         <button  type="button" class="btn btn-primary text-center glow">
          Quiz Winner
          <div class="winner">
              <p ng-if="vm.landingPageContent.quiz.winnerDetails.name">Congratulations!!</p>
              <p ng-if="!vm.landingPageContent.quiz.winnerDetails.name">Coming Soon!!</p>
-             <img src="/images/PP.jpg" class="img-thumbnail" ng-if="vm.landingPageContent.quiz.winnerDetails.name"/>
-             <p>{{ vm.landingPageContent.quiz.winnerDetails.name + '('+vm.landingPageContent.quiz.winnerDetails.regNo + ')'}}</p>
-             <p>{{ vm.landingPageContent.quiz.winnerDetails.phoneNumber }}</p>
+             <img src="{{vm.landingPageContent.quiz.winnerDetails.imgURL}}" class="img-thumbnail" ng-if="vm.landingPageContent.quiz.winnerDetails.imgURL"/>
+             <p ng-if="vm.landingPageContent.quiz.winnerDetails.name">{{ vm.landingPageContent.quiz.winnerDetails.name }}</p>
+             
          </div> 
         </button>
     </div>
@@ -17,9 +20,15 @@
       <h2>Kuzhal Music School</h2>
       <button to="#reachUs"type="button" class="btn btn-lg btn-primary btn-reachUs text-center">Reach Us</button>
     </div>
-    <marquee direction="left" speed="normal" behavior="loop">
-      <strong>{{vm.landingPageContent.marquee.title}}</strong>&nbsp;{{vm.landingPageContent.marquee.info}}
-     </marquee>
+    <div class="marquee-container">
+      <marquee direction="left" speed="normal" behavior="loop">
+        <strong>{{vm.landingPageContent.marquee[1].title}}</strong>&nbsp;{{vm.landingPageContent.marquee[1].info}}
+      </marquee>
+      <marquee direction="left" speed="normal" behavior="loop">
+        <strong>{{vm.landingPageContent.marquee[2].title}}</strong>&nbsp;{{vm.landingPageContent.marquee[2].info}}
+      </marquee>
+    </div>
+    
   </div>
   <div id="aboutUs" class="row section">
     <div class="col-md-4 col-xs-12">
