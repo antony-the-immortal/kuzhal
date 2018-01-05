@@ -5,14 +5,39 @@
 </div>
 <div class="modal-body kuzhal_bg">
     <form role="form" name="signUpForm" novalidate focus-error ng-if="!setPassword">
-        <md-input-container class="md-block">
-            <label>Marquee TitleL</label>
-            <input type="text" ng-model="landingPageContent.marquee.title" autocomplete="off">
-        </md-input-container>
-        <md-input-container class="md-block">
-            <label>Marquee Text</label>
-            <textarea rows="5" ng-model="landingPageContent.marquee.info"></textarea>
-        </md-input-container>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                    <md-input-container class="md-block">
+                            <label>Title</label>
+                            <input type="text" ng-model="landingPageContent.marquee[0].title" autocomplete="off">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Info</label>
+                            <textarea rows="3" ng-model="landingPageContent.marquee[0].info"></textarea>
+                        </md-input-container>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                    <md-input-container class="md-block">
+                            <label>Title</label>
+                            <input type="text" ng-model="landingPageContent.marquee[1].title" autocomplete="off">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Info</label>
+                            <textarea rows="3" ng-model="landingPageContent.marquee[1].info"></textarea>
+                        </md-input-container>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                    <md-input-container class="md-block">
+                            <label>Title</label>
+                            <input type="text" ng-model="landingPageContent.marquee[2].title" autocomplete="off">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Info</label>
+                            <textarea rows="3" ng-model="landingPageContent.marquee[2].info"></textarea>
+                        </md-input-container>
+            </div>
+        </div>
+        
         <md-input-container class="md-block">
             <label>Guru Speech URL</label>
             <input type="text" ng-model="landingPageContent.guruSpeech.url" autocomplete="off">

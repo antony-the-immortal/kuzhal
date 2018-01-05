@@ -26167,7 +26167,7 @@ div.slider figure {
     right: 0;
     background: transparent;
     padding: 10px;
-    color: yellow;
+    color: #00ff2a;
     font-size: 16px;
     font-weight: 400;
     width: 30vw;
@@ -26183,7 +26183,8 @@ div.slider figure {
     width: 76%;
     margin: 0 1%; }
     .jumbotron .marquee-container marquee:last-child {
-      margin-top: 10%; }
+      margin-top: 10%;
+      color: #00e1ff; }
 
 img.profile {
   height: 500px;
@@ -26956,6 +26957,8 @@ header,
   max-height: 480px;
   overflow: auto;
   padding: 15px; }
+  .edit-modal .modal-body md-input-container textarea.md-input {
+    padding: 5px; }
 
 .edit-modal .winnerDetails input {
   display: inline-block; }

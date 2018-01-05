@@ -55,6 +55,10 @@
         max-height: 480px;
         overflow: auto;
         padding: 15px;
+
+        md-input-container textarea.md-input {
+            padding: 5px;
+        }
     }
     .winnerDetails {
         input {
